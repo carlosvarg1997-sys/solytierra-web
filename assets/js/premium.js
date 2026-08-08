@@ -3,7 +3,8 @@
 
   document.documentElement.classList.add("js");
 
-  var WSP = window.SYT_WSP_NUM || window.WSP_NUM || "";
+  var WSP = window.SYT_WSP_NUM || window.WSP_NUM || "56982982495";
+  window.WSP_NUM = WSP;
   var IS_LOCAL = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
   var API = window.SYT_API_BASE || (IS_LOCAL ? "http://127.0.0.1:8000" : "https://api.arriendostrajestobas.cl");
   var ARRIENDO = 35000;

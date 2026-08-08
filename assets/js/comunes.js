@@ -9,7 +9,7 @@
 
   // ── 1. Constantes globales (configurables) ──────────────────
   // Número real de WhatsApp de Sol y Tierra. Cambiar en un solo lugar.
-  const WSP_NUM = window.SYT_WSP_NUM || '';
+  const WSP_NUM = window.SYT_WSP_NUM || '56982982495';
 
   // Endpoint de leads. HOY: opcional (si vacío → solo WhatsApp).
   // MAÑANA: n8n → "Hermot-SyT" crea el documento y responde.

@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   Sol y Tierra · tokens base + utilidades de marca v3 "Atardecer"
+   El degradado del logo es el sello: wordmark, hero glow, CTA, números.
+   ───────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    /* Tokens crudos (mirror de SISTEMA_DISENO_SOL_Y_TIERRA.md) */
+    --blanco:     #FFFFFF;
+    --arena:      #FFFBF5;
+    --surface:    #FBF8F3;
+    --linea:      #EFE6DC;
+    --texto:      #241C17;
+    --texto-2:    #75695E;
+    --texto-3:    #A89C90;
+
+    --lima:       #B8D827;
+    --verde:      #6CB52E;
+    --oro:        #F8C20C;
+    --naranja:    #F5871E;
+    --coral:      #F0452E;
+    --frambuesa:  #E62864;
+
+    --ink:        #D62149;
+    --ok:         #15924E;
+    --alerta:     #E62864;
+    --wsp:        #25D366;
+
+    /* El sello: el degradado de marca */
+    --grad: linear-gradient(125deg,
+                #B8D827 0%,
+                #6CB52E 15%,
+                #F8C20C 43%,
+                #F5871E 63%,
+                #F0452E 82%,
+                #E62864 100%);
+
+    /* Roles semánticos */
+    --bg:           var(--blanco);
+    --primary:      var(--coral);
+    --primary-hover:var(--ink);
+    --link:         var(--ink);
+    --accent:       var(--naranja);
+
+    --radius:       13px;
+    --radius-card:  22px;
+    --ease-spring:  cubic-bezier(0.34, 1.35, 0.64, 1);
+  }
+
+  /* Fondo BLANCO manda. Calor del logo va en acentos. */
+  html, body { background-color: var(--blanco); }
+  body {
+    @apply text-carbon font-manrope antialiased selection:bg-sol/30 selection:text-carbon overflow-x-hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sora font-bold text-carbon;
+  }
+  /* Números siempre monoespaciados (datos, precios, KPIs) */
+  .mono, .num { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+}
+
+/* ── El sello: wordmark "Sol y Tierra" en degradado ───────── */
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  line-height: 1.05;
+}
+.grad-text-soft {
+  background: linear-gradient(125deg, #F0452E 0%, #E62864 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Franjas / glows de marca */
+.bg-grad        { background: var(--grad); }
+.bg-grad-x      { background: var(--grad-x, var(--grad)); }
+.bg-grad-soft   { background: var(--grad-soft); }
+.grad-glow      {
+  position: relative;
+}
+.grad-glow::before{
+  content: "";
+  position: absolute;
+  inset: 6% 10%;
+  background: var(--grad);
+  opacity: .16;
+  filter: blur(46px);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Andean Patterns (de la maqueta, decorativo) */
+.andean-pattern {
+  background-image: radial-gradient(circle at 2px 2px, #F3E7D8 1.5px, transparent 0);
+  background-size: 16px 16px;
+  opacity: 0.6;
+}
+.chakana-divider {
+  height: 16px;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(245, 135, 30, 0.14) 8px, rgba(245, 135, 30, 0.14) 16px);
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+/* WhatsApp Pulse */
+.whatsapp-pulse {
+  animation: pulse-green 2.5s cubic-bezier(0.34, 1.35, 0.64, 1) infinite;
+}
+@keyframes pulse-green {
+  0%   { transform: scale(1);                          box-shadow: 0 0 0 0   rgba(37, 211, 102, 0.50); }
+  70%  { transform: scale(1.03);                       box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);   }
+  100% { transform: scale(1);                          box-shadow: 0 0 0 0   rgba(37, 211, 102, 0);   }
+}
+
+/* Spring reveal */
+.spring-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: spring-reveal-anim 0.85s cubic-bezier(0.34, 1.35, 0.64, 1) forwards;
+}
+@keyframes spring-reveal-anim {
+  to { opacity: 1; transform: translateY(0); }
+}
+.spring-reveal-delay-1 { animation-delay: 0.15s; }
+.spring-reveal-delay-2 { animation-delay: 0.30s; }
+.spring-reveal-delay-3 { animation-delay: 0.45s; }
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Numerales chilenos (CLP) con coma y separador de miles */
+.clp { font-family: 'JetBrains Mono', ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+/* Accesibilidad: foco visible con anillo coral */
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Respeta reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  .spring-reveal, .whatsapp-pulse, * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

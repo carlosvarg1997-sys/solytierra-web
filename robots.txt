@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /intranet.html
+Disallow: /var/
+
+Sitemap: https://arriendostrajestobas.cl/sitemap.xml

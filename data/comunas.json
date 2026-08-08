@@ -1,0 +1,72 @@
+[
+  {
+    "comuna": "Puente Alto",
+    "slug": "puente-alto",
+    "title": "Arriendo de trajes de Tobas en Puente Alto | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Puente Alto. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Puente Alto y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Maipú",
+    "slug": "maipu",
+    "title": "Arriendo de trajes de Tobas en Maipú | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Maipú. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Maipú y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "La Florida",
+    "slug": "la-florida",
+    "title": "Arriendo de trajes de Tobas en La Florida | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en La Florida. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de La Florida y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Peñalolén",
+    "slug": "penalolen",
+    "title": "Arriendo de trajes de Tobas en Peñalolén | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Peñalolén. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Peñalolén y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Recoleta",
+    "slug": "recoleta",
+    "title": "Arriendo de trajes de Tobas en Recoleta | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Recoleta. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Recoleta y coordinamos la ubicación y las ventanas de retiro después de confirmar la reserva."
+  },
+  {
+    "comuna": "Renca",
+    "slug": "renca",
+    "title": "Arriendo de trajes de Tobas en Renca | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Renca. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Renca y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Lampa",
+    "slug": "lampa",
+    "title": "Arriendo de trajes de Tobas en Lampa | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Lampa. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Lampa y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Quilicura",
+    "slug": "quilicura",
+    "title": "Arriendo de trajes de Tobas en Quilicura | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Quilicura. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Quilicura y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Huechuraba",
+    "slug": "huechuraba",
+    "title": "Arriendo de trajes de Tobas en Huechuraba | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Huechuraba. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Huechuraba y coordinamos cada reserva según la fecha y el inventario disponible."
+  },
+  {
+    "comuna": "Santiago",
+    "slug": "santiago",
+    "title": "Arriendo de trajes de Tobas en Santiago | Sol y Tierra",
+    "description": "Consulta disponibilidad de trajes de Tobas por curso en Santiago. Precio, garantía, tallaje de prueba y condiciones claras.",
+    "customText": "Atendemos solicitudes de cursos de Santiago y coordinamos cada reserva según la fecha y el inventario disponible."
+  }
+]

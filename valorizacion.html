@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorización de Trajes | Valores de reposición | Sol y Tierra</title>
+  <meta name="description" content="Valores de reposición por pérdida o daño de trajes de Tobas. Tabla de multas por pieza: pluma, peto, falda, puñeras, polainas, arco, penacho, pechera y faldón.">
+  <meta name="keywords" content="valorizacion trajes tobas, multas trajes sol y tierra, valores reposicion trajes, perdida traje tobas, dano traje folclorico">
+  <link rel="canonical" href="https://arriendostrajestobas.cl/valorizacion.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arriendostrajestobas.cl/valorizacion.html">
+  <meta property="og:title" content="Valorización de Trajes | Sol y Tierra">
+  <meta property="og:description" content="Valores de reposición por pérdida o daño de piezas de los trajes de Tobas.">
+  <meta property="og:image" content="https://arriendostrajestobas.cl/assets/images/brand/syt-mark.svg">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Valorización de Trajes | Sol y Tierra">
+  <meta property="twitter:description" content="Valores de reposición por pérdida o daño de piezas de los trajes de Tobas.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+  <style>
+    /* CSS critico inline (anti-FOUC) */
+    html,body{margin:0;padding:0;box-sizing:border-box;background:#FFFFFF}
+    [data-fade]{opacity:0}
+
+    /* ── Valorización · estilos específicos de página (tema claro) ── */
+    body{font-size:1.18rem}
+    .val-tabs{
+      display:flex; flex-wrap:wrap; gap:8px; padding:8px;
+      background:#F6F6F7; border:1px solid #EFE6DC;
+      border-radius:999px; max-width:420px; margin:0 auto 44px; box-shadow:0 10px 30px rgba(0,0,0,.06);
+    }
+    .val-tabs button{
+      flex:1; min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:0 22px; border:0; border-radius:999px; background:transparent;
+      color:#75695E; font-family:var(--font-display); font-weight:800;
+      font-size:1rem; letter-spacing:.04em; text-transform:uppercase;
+      transition:background .25s var(--ease),color .25s,box-shadow .25s;
+    }
+    .val-tabs button.active{
+      background:var(--coral); color:#fff;
+      box-shadow:0 12px 30px rgba(240,69,46,.32);
+    }
+    .val-tabs button:not(.active):hover{background:#EFE6DC;color:#181411}
+
+    /* Grid de cards expandibles */
+    .val-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+    @media(max-width:980px){.val-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:680px){.val-grid{grid-template-columns:1fr}}
+
+    /* Card expandible por modelo (tema claro) */
+    .val-card{
+      background:#FFFFFF; border:1px solid #EFE6DC;
+      border-radius:22px; overflow:hidden;
+      box-shadow:0 14px 36px -18px rgba(0,0,0,.12);
+      transition:box-shadow .3s,transform .3s var(--ease),border-color .3s;
+    }
+    .val-card[open]{border-color:rgba(240,69,46,.32);box-shadow:0 24px 56px -20px rgba(240,69,46,.14)}
+    .val-card summary{
+      list-style:none; cursor:pointer; padding:22px 24px;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:14px;
+      font-family:var(--font-display); color:#181411;
+    }
+    .val-card summary::-webkit-details-marker{display:none}
+    .val-card summary .vc-head{display:flex;flex-direction:column;gap:6px;min-width:0}
+    .val-card .vc-tag{
+      display:inline-flex; align-items:center; gap:8px; color:var(--coral);
+      font-size:.82rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+    }
+    .val-card .vc-tag::before{content:"";width:7px;height:7px;border-radius:999px;background:var(--coral)}
+    .val-card .vc-title{font-size:1.35rem;font-weight:800;line-height:1.1;color:#181411}
+    .val-card .vc-meta{color:#75695E;font-size:.96rem;font-weight:600;font-family:var(--font-body)}
+    .val-card .vc-meta b{color:#181411;font-family:var(--font-mono);font-weight:700}
+    .val-card .vc-toggle{
+      flex:0 0 auto; width:36px; height:36px; display:grid; place-items:center;
+      border-radius:999px; background:#F6F6F7; border:1px solid #EFE6DC;
+      color:#181411; font-size:1.1rem; transition:transform .3s var(--ease),background .25s;
+    }
+    .val-card[open] .vc-toggle{transform:rotate(45deg);background:var(--coral);border-color:var(--coral);color:#fff}
+    .val-card summary:hover .vc-toggle{background:rgba(240,69,46,.18)}
+
+    /* Cuerpo de la card: tabla + total */
+    .val-body{padding:0 24px 24px;animation:valFade .35s var(--ease-out)}
+    @keyframes valFade{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+    /* Tabla (tema claro) */
+    .val-table{
+      width:100%; border-collapse:separate; border-spacing:0; margin-top:4px;
+      background:#FFFFFF; border:1px solid #EFE6DC;
+      border-radius:14px; overflow:hidden;
+    }
+    .val-table thead th{
+      text-align:left; padding:12px 14px;
+      font-family:var(--font-display); font-size:.78rem; font-weight:800;
+      letter-spacing:.1em; text-transform:uppercase;
+      color:#75695E;
+      background:#F6F6F7; border-bottom:1px solid #EFE6DC;
+    }
+    .val-table thead th:nth-child(2){text-align:right}
+    .val-table tbody td{
+      padding:13px 14px; font-size:1.04rem; color:#181411;
+      border-bottom:1px solid #EFE6DC;
+    }
+    .val-table tbody td:first-child{font-weight:600}
+    .val-table tbody td:last-child{
+      text-align:right; font-family:var(--font-mono); font-weight:700;
+      color:#181411; white-space:nowrap;
+    }
+    .val-table tbody tr:last-child td{border-bottom:0}
+    .val-table tbody tr:hover td{background:rgba(240,69,46,.06)}
+    .val-table .par-note{display:inline-block;margin-left:6px;font-size:.76rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em}
+
+    /* Total destacado por modelo */
+    .val-total{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      margin-top:14px; padding:14px 16px; border-radius:14px;
+      background:#F6F6F7;
+      border:1px solid rgba(240,69,46,.22);
+    }
+    .val-total .vt-label{font-family:var(--font-display);font-weight:800;font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;color:#75695E}
+    .val-total .vt-val{font-family:var(--font-mono);font-weight:800;font-size:1.35rem;color:#181411}
+    .val-total .vt-val span{color:var(--coral)}
+
+    /* Panel de contenido por tab */
+    .val-panel{display:none}
+    .val-panel.active{display:block;animation:valFade .4s var(--ease-out)}
+
+    /* Intro card (tema claro) */
+    .val-intro{
+      max-width:780px; margin:0 auto; padding:28px;
+      background:#FFFFFF; border:1px solid #EFE6DC;
+      border-radius:22px; box-shadow:var(--shadow-lg);
+    }
+    .val-intro p{color:#181411;font-size:1.12rem;line-height:1.6}
+    .val-intro b{color:#181411}
+    .impact-card{max-width:980px;margin:28px auto 0;display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);border-radius:24px;overflow:hidden;background:#111;color:#fff;box-shadow:0 22px 58px rgba(0,0,0,.16)}
+    .impact-card img{width:100%;height:100%;min-height:330px;object-fit:cover}.impact-copy{padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;justify-content:center}.impact-copy h2{font:900 clamp(1.7rem,3.4vw,3rem)/1 var(--font-display);color:#fff;letter-spacing:-.04em;margin:10px 0 16px}.impact-copy p{color:rgba(255,255,255,.72);line-height:1.65}.impact-copy strong{color:#fff}.impact-list{display:grid;gap:10px;margin-top:20px}.impact-list span{color:rgba(255,255,255,.82);padding-left:22px;position:relative}.impact-list span::before{content:'→';position:absolute;left:0;color:var(--coral);font-weight:900}
+    @media(max-width:720px){.impact-card{grid-template-columns:1fr}.impact-card img{min-height:250px;max-height:310px}}
+
+    /* Nota final destacada (tema claro) */
+    .val-note{
+      max-width:780px; margin:0 auto; padding:22px 26px; border-radius:18px;
+      background:rgba(240,69,46,.06); border:1px solid rgba(240,69,46,.30);
+      display:flex; gap:14px; align-items:flex-start;
+    }
+    .val-note .vn-ico{
+      flex:0 0 auto; width:38px;height:38px; display:grid; place-items:center;
+      border-radius:999px; background:var(--coral); color:#fff;
+    }
+    .val-note .vn-ico svg{width:20px;height:20px}
+    .val-note p{color:#181411;font-size:1.04rem;line-height:1.55;margin:0}
+    .val-note b{color:#181411}
+
+    .val-count{
+      display:inline-flex; align-items:center; gap:8px; margin-bottom:8px;
+      font-family:var(--font-mono); font-size:.84rem; font-weight:700;
+      color:var(--orange); letter-spacing:.06em; text-transform:uppercase;
+    }
+
+    /* Foto representativa del traje dentro de cada card de valorización */
+    .valor-foto{
+      width:120px; height:160px; object-fit:cover;
+      border-radius:12px;
+      border:2px solid rgba(240,69,46,.30);
+      box-shadow:0 4px 15px rgba(0,0,0,.12);
+      margin:0 auto 12px; display:block;
+      max-width:200px;
+    }
+  </style>
+  <noscript><style>[data-fade]{opacity:1!important;transform:none!important}.val-panel{display:block!important}</style></noscript>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio" data-magnetic data-magnetic-strength="6">
+        <img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64">
+        <span>SyT</span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="condiciones.html">Condiciones</a>
+        <a href="catalogo.html">Trajes</a>
+        <a href="solicitud.html">Reservar</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-dark" href="solicitud.html">Reservar</a>
+        <button class="btn btn-icon menu-btn" type="button" data-menu-toggle aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="wrap mobile-menu">
+      <a href="index.html">Inicio</a>
+      <a href="condiciones.html">Condiciones</a>
+      <a href="catalogo.html">Trajes</a>
+      <a href="solicitud.html">Reservar</a>
+      <a href="intranet.html">Portal cliente</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-premium">
+      <div class="wrap-wide hero-layout" style="grid-template-columns:1fr">
+        <div class="hero-copy">
+          <span class="eyebrow">Tarifario de reposición</span>
+          <h1 class="seo-title">Valores de reposición por pérdida o daño de piezas de los trajes</h1>
+          <h2 class="hero-title">Valorización<br>de Trajes</h2>
+          <p class="lead">Valores de reposición por pérdida o daño de cualquiera de las piezas que componen los trajes de Tobas arrendados por Sol y Tierra.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="section">
+      <div class="wrap">
+        <div class="val-intro">
+          <span class="val-count"><span style="width:7px;height:7px;border-radius:999px;background:var(--coral)"></span>Lee esto con atención</span>
+          <p>A continuación, te dejamos la tabla de los valores que deberán cancelar por concepto de <b>multas en el caso de pérdida, daño de alguna pieza</b> de cualquiera de los trajes. Todos los accesorios que están mencionados en par, en el caso de pérdida o daño, <b>se debe pagar el par</b>.</p>
+        </div>
+        <article class="impact-card reveal">
+          <img src="assets/images/guides/danos-reales.webp" alt="Pluma quebrada y pieza del vestuario desprendida: daños que afectan el siguiente arriendo" width="1440" height="960" loading="lazy">
+          <div class="impact-copy"><span class="eyebrow">No es solo una pieza</span><h2>Un daño puede afectar el siguiente arriendo.</h2><p>La valorización no cubre únicamente el material perdido. Una pieza rota, mojada, alterada o incompleta puede impedir entregar ese traje a otro curso y provocar una <strong>pérdida operativa adicional</strong>.</p><div class="impact-list"><span>Costo de reparación o reposición.</span><span>Tiempo de trabajo y revisión.</span><span>Riesgo de dejar incompleto otro set reservado.</span><span>Posible pérdida de un arriendo posterior.</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TABS + CARDS EXPANDIBLES -->
+    <section class="section soft" id="tablas">
+      <div class="wrap section-head center">
+        <span class="eyebrow">Modelos y piezas</span>
+        <h2>Selecciona y revisa cada modelo.</h2>
+        <p class="lead" style="margin:18px auto 0">Filtra por trajes de mujer u hombre y despliega cada modelo para ver el valor de cada pieza y el total del set.</p>
+      </div>
+
+      <div class="wrap">
+        <!-- Tabs filtro -->
+        <div class="val-tabs" role="tablist" aria-label="Filtro de trajes">
+          <button id="tab-mujer" class="active" role="tab" aria-selected="true" aria-controls="panel-mujer" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M12 14c-4 0-7 3-7 6h14c0-3-3-6-7-6z"/></svg>
+            Trajes de Mujeres
+          </button>
+          <button id="tab-hombre" role="tab" aria-selected="false" aria-controls="panel-hombre" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="4"/><path d="M12 13c-4 0-8 4-8 8h16c0-4-4-8-8-8z"/></svg>
+            Trajes de Hombres
+          </button>
+        </div>
+
+        <!-- PANEL MUJERES -->
+        <div id="panel-mujer" class="val-panel active" role="tabpanel" aria-labelledby="tab-mujer">
+          <div class="val-grid">
+
+            <!-- Modelo 1 -->
+            <details class="val-card" open>
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 01</span>
+                  <span class="vc-title">Mujer · Modelo 1</span>
+                  <span class="vc-meta"><b>14</b> trajes · Tallas XS a 2XL</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/rojo-mujer.webp" alt="Traje mujer modelo 1 - color rojo" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$50.000</td></tr>
+                    <tr><td>Falda</td><td>$50.000</td></tr>
+                    <tr><td>Puñeras <span class="par-note">par</span></td><td>$36.000</td></tr>
+                    <tr><td>Polainas <span class="par-note">par</span></td><td>$57.000</td></tr>
+                    <tr><td>Arco</td><td>$36.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>529.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 2 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 02</span>
+                  <span class="vc-title">Mujer · Modelo 2</span>
+                  <span class="vc-meta"><b>12</b> trajes · Tallas XS · S · M · L</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/azul-mujer.webp" alt="Traje mujer modelo 2 - color azul" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$43.000</td></tr>
+                    <tr><td>Falda</td><td>$43.000</td></tr>
+                    <tr><td>Puñeras</td><td>$43.000</td></tr>
+                    <tr><td>Polainas</td><td>$43.000</td></tr>
+                    <tr><td>Arco</td><td>$43.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>515.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 3 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 03</span>
+                  <span class="vc-title">Mujer · Modelo 3</span>
+                  <span class="vc-meta"><b>7</b> trajes · Tallas XS · S · M · L</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/fucsia-mujer.webp" alt="Traje mujer modelo 3 - color fucsia" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$43.000</td></tr>
+                    <tr><td>Falda</td><td>$43.000</td></tr>
+                    <tr><td>Puñeras</td><td>$29.000</td></tr>
+                    <tr><td>Polainas</td><td>$36.000</td></tr>
+                    <tr><td>Arco</td><td>$29.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>480.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 4 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 04</span>
+                  <span class="vc-title">Mujer · Modelo 4</span>
+                  <span class="vc-meta"><b>3</b> trajes · Tallas S · M</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/rojo-mujer.webp" alt="Traje mujer modelo 4 - color rojo" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$71.000</td></tr>
+                    <tr><td>Falda</td><td>$71.000</td></tr>
+                    <tr><td>Puñeras</td><td>$43.000</td></tr>
+                    <tr><td>Polainas</td><td>$43.000</td></tr>
+                    <tr><td>Arco</td><td>$43.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>571.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 5 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 05</span>
+                  <span class="vc-title">Mujer · Modelo 5</span>
+                  <span class="vc-meta"><b>6</b> trajes · Tallas M · L · XL · 2XL</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/azul-mujer.webp" alt="Traje mujer modelo 5 - color azul" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$57.000</td></tr>
+                    <tr><td>Falda</td><td>$57.000</td></tr>
+                    <tr><td>Puñeras</td><td>$43.000</td></tr>
+                    <tr><td>Polainas</td><td>$57.000</td></tr>
+                    <tr><td>Arco</td><td>$43.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>557.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 6 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 06</span>
+                  <span class="vc-title">Mujer · Modelo 6</span>
+                  <span class="vc-meta"><b>8</b> trajes · Tallas XS · S · M · L</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/fucsia-mujer.webp" alt="Traje mujer modelo 6 - color fucsia" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$57.000</td></tr>
+                    <tr><td>Falda</td><td>$57.000</td></tr>
+                    <tr><td>Puñeras</td><td>$43.000</td></tr>
+                    <tr><td>Polainas</td><td>$43.000</td></tr>
+                    <tr><td>Arco</td><td>$29.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>529.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 7 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 07</span>
+                  <span class="vc-title">Mujer · Modelo 7</span>
+                  <span class="vc-meta"><b>4</b> trajes · Tallas M · L · XL · 2XL</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/rojo-mujer.webp" alt="Traje mujer modelo 7 - color rojo" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$71.000</td></tr>
+                    <tr><td>Falda</td><td>$71.000</td></tr>
+                    <tr><td>Puñeras</td><td>$43.000</td></tr>
+                    <tr><td>Polainas</td><td>$43.000</td></tr>
+                    <tr><td>Arco</td><td>$43.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>571.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 8 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 08</span>
+                  <span class="vc-title">Mujer · Modelo 8</span>
+                  <span class="vc-meta"><b>2</b> trajes · Tallas XS · S</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/azul-mujer.webp" alt="Traje mujer modelo 8 - color azul" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Peto</td><td>$43.000</td></tr>
+                    <tr><td>Falda</td><td>$43.000</td></tr>
+                    <tr><td>Puñeras</td><td>$29.000</td></tr>
+                    <tr><td>Polainas</td><td>$29.000</td></tr>
+                    <tr><td>Arco</td><td>$29.000</td></tr>
+                    <tr><td>Penacho</td><td>$286.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>473.000</span></div>
+              </div>
+            </details>
+
+          </div>
+        </div>
+
+        <!-- PANEL HOMBRES -->
+        <div id="panel-hombre" class="val-panel" role="tabpanel" aria-labelledby="tab-hombre">
+          <div class="val-grid">
+
+            <!-- Modelo 1 -->
+            <details class="val-card" open>
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 01</span>
+                  <span class="vc-title">Hombre · Modelo 1</span>
+                  <span class="vc-meta">Traje de Tobas · Hombre</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/rojo-hombre.webp" alt="Traje hombre modelo 1 - color rojo" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Pechera</td><td>$57.000</td></tr>
+                    <tr><td>Faldón</td><td>$57.000</td></tr>
+                    <tr><td>Puñeras <span class="par-note">par</span></td><td>$114.000</td></tr>
+                    <tr><td>Polainas <span class="par-note">par</span></td><td>$71.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>313.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 2 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 02</span>
+                  <span class="vc-title">Hombre · Modelo 2</span>
+                  <span class="vc-meta">Traje de Tobas · Hombre</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/azul-hombre.webp" alt="Traje hombre modelo 2 - color azul" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Pechera</td><td>$57.000</td></tr>
+                    <tr><td>Faldón</td><td>$57.000</td></tr>
+                    <tr><td>Puñeras</td><td>$114.000</td></tr>
+                    <tr><td>Polainas</td><td>$71.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>313.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 3 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 03</span>
+                  <span class="vc-title">Hombre · Modelo 3</span>
+                  <span class="vc-meta">Traje de Tobas · Hombre</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/fucsia-hombre.webp" alt="Traje hombre modelo 3 - color fucsia" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Pechera</td><td>$57.000</td></tr>
+                    <tr><td>Faldón</td><td>$57.000</td></tr>
+                    <tr><td>Puñeras</td><td>$114.000</td></tr>
+                    <tr><td>Polainas</td><td>$71.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>313.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 4 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 04</span>
+                  <span class="vc-title">Hombre · Modelo 4</span>
+                  <span class="vc-meta">Traje de Tobas · Hombre</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/rojo-hombre.webp" alt="Traje hombre modelo 4 - color rojo" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Pechera</td><td>$43.000</td></tr>
+                    <tr><td>Faldón</td><td>$43.000</td></tr>
+                    <tr><td>Puñeras</td><td>$114.000</td></tr>
+                    <tr><td>Polainas</td><td>$71.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>285.000</span></div>
+              </div>
+            </details>
+
+            <!-- Modelo 5 -->
+            <details class="val-card">
+              <summary>
+                <span class="vc-head">
+                  <span class="vc-tag">Modelo 05</span>
+                  <span class="vc-title">Hombre · Modelo 5</span>
+                  <span class="vc-meta">Traje de Tobas · Hombre</span>
+                </span>
+                <span class="vc-toggle" aria-hidden="true">+</span>
+              </summary>
+              <div class="val-body">
+                <img class="valor-foto" src="assets/images/oficiales/azul-hombre.webp" alt="Traje hombre modelo 5 - color azul" loading="lazy">
+                <table class="val-table">
+                  <thead><tr><th>Pieza</th><th>Valor</th></tr></thead>
+                  <tbody>
+                    <tr><td>Pluma</td><td>$14.000</td></tr>
+                    <tr><td>Pechera</td><td>$43.000</td></tr>
+                    <tr><td>Faldón</td><td>$43.000</td></tr>
+                    <tr><td>Puñeras</td><td>$114.000</td></tr>
+                    <tr><td>Polainas</td><td>$71.000</td></tr>
+                  </tbody>
+                </table>
+                <div class="val-total"><span class="vt-label">Total set completo</span><span class="vt-val"><span>$</span>285.000</span></div>
+              </div>
+            </details>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NOTA FINAL -->
+    <section class="section">
+      <div class="wrap">
+        <div class="val-note">
+          <span class="vn-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L1 21h22L12 2z" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M12 9v5M12 17.5v.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <p><b>Importante:</b> Todos los accesorios mencionados en par, en caso de pérdida o daño, <b>se debe pagar el par</b>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="wrap cta-band reveal">
+        <div>
+          <h2>¿Tienes dudas sobre un valor?</h2>
+          <p>Revisa las condiciones antes de reservar y usa el asistente si necesitas aclarar un valor o una regla de cuidado.</p>
+        </div>
+        <a class="btn btn-wsp" href="condiciones.html#faq">Ver Preguntas frecuentes</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap foot-grid">
+      <div><a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio" data-magnetic data-magnetic-strength="6"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></a><p style="margin-top:14px;max-width:42ch">Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p></div>
+      <div><h4>Sitio</h4><a href="index.html">Inicio</a><a href="catalogo.html">Trajes</a><a href="valorizacion.html">Valorización</a><a href="condiciones.html#faq">Preguntas frecuentes</a></div>
+      <div><h4>Reservar</h4><a href="solicitud.html">Solicitud</a><a data-wa="Hola Sol y Tierra. Tengo una consulta sobre la valorización de trajes." href="#">WhatsApp</a><a href="contacto.html">Contacto</a></div>
+      <div><h4>Contacto</h4><a href="contacto.html">Contáctate con nuestro equipo</a><a href="condiciones.html">Ventana 6 h</a></div>
+    </div>
+    <div class="wrap foot-bottom"><span>&copy; 2026 SyT SpA</span><span>Valores de reposición por pérdida o daño.</span></div>
+  </footer>
+
+  <a class="fab" data-wa="Hola Sol y Tierra. Tengo una consulta sobre la valorización de trajes." href="#" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 00-8.47 15.03L2.5 21.5l4.58-1.05A9.96 9.96 0 1012.04 2zm5.82 14.35c-.25.7-1.24 1.28-1.98 1.45-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.25-5.05-4.45-.14-.2-1.2-1.6-1.2-3.06 0-1.45.74-2.16 1-2.45.26-.29.58-.36.77-.36h.56c.18.01.42-.06.66.5.25.6.84 2.06.91 2.2.08.15.13.32.03.52-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.23 1.6 1.99 1.1.98 2.02 1.28 2.31 1.42.29.15.46.13.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.68-.18 1.38z"/></svg>
+  </a>
+
+  <script src="assets/js/premium.js?v=20260805-3" defer></script>
+  <script src="assets/js/motion.js" defer></script>
+  <script src="assets/js/sol.js?v=20260805-4" defer></script>
+  <script>
+    // Tabs mujer / hombre
+    (function(){
+      var btnM = document.getElementById('tab-mujer');
+      var btnH = document.getElementById('tab-hombre');
+      var panelM = document.getElementById('panel-mujer');
+      var panelH = document.getElementById('panel-hombre');
+      function activate(btn, panel, otherBtn, otherPanel){
+        btn.classList.add('active'); btn.setAttribute('aria-selected','true');
+        otherBtn.classList.remove('active'); otherBtn.setAttribute('aria-selected','false');
+        panel.classList.add('active'); otherPanel.classList.remove('active');
+      }
+      btnM.addEventListener('click', function(){ activate(btnM, panelM, btnH, panelH); });
+      btnH.addEventListener('click', function(){ activate(btnH, panelH, btnM, panelM); });
+    })();
+  </script>
+</body>
+</html>

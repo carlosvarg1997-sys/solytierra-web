@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Intranet · Sol y Tierra</title>
+  <meta name="description" content="Portal del cliente. Revisa tu arriendo, completa tu ficha de tallaje y descarga tus documentos.">
+  <link rel="canonical" href="https://arriendostrajestobas.cl/intranet.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+  <meta property="og:site_name" content="Sol y Tierra">
+  <meta property="og:url" content="https://arriendostrajestobas.cl/intranet.html">
+  <meta property="og:title" content="Portal del cliente | Sol y Tierra">
+  <meta property="og:description" content="Revisa tu arriendo, completa tu ficha de tallaje y descarga los documentos necesarios desde un solo lugar.">
+  <meta property="og:image" content="https://arriendostrajestobas.cl/assets/images/references/home-hero.webp">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+  <style>
+    /* === INTRANET === */
+    body{background:var(--white);color:var(--text-dark)}
+    .intranet-hero{padding:96px 0 32px;text-align:center}
+    .intranet-hero .tag{display:inline-block;color:var(--coral);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
+    .intranet-hero h1{font-family:var(--font-display);font-weight:900;font-size:clamp(2.2rem,5vw,3.2rem);letter-spacing:-.03em;line-height:1.05;color:var(--black);margin-bottom:14px}
+    .intranet-hero .lead{font-size:1.1rem;color:var(--text-muted);max-width:560px;margin:0 auto}
+    .intranet-card{background:var(--white);border:1.5px solid var(--border-light);border-radius:20px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+    .intranet-card .label{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--coral);margin-bottom:6px}
+    .intranet-card input{width:100%;padding:16px;border:1.5px solid var(--border-light);border-radius:12px;background:var(--white);color:var(--black);font:inherit;font-size:1.1rem;font-family:var(--font-mono);font-weight:700;text-transform:uppercase;letter-spacing:.05em;text-align:center;outline:none;transition:border-color .25s,box-shadow .25s;margin-bottom:14px}
+    .intranet-card input:focus{border-color:var(--coral);box-shadow:0 0 0 3px rgba(240,69,46,.12)}
+    .intranet-card .btn-login{width:100%;padding:16px;background:var(--coral);color:var(--white);border:none;border-radius:12px;font-weight:800;font-size:1.05rem;cursor:pointer;transition:background .2s}
+    .intranet-card .btn-login:hover{background:#D63520}
+    .intranet-card .btn-login:disabled{opacity:.5;cursor:not-allowed}
+    .intranet-help{font-size:.88rem;color:var(--text-muted);margin-top:18px;line-height:1.5}
+    .intranet-help code{font-family:var(--font-mono);background:rgba(240,69,46,.08);padding:2px 8px;border-radius:6px;color:var(--coral);font-weight:700}
+    /* DASHBOARD */
+    .dash{display:none}
+    .dash.active{display:block}
+    .arriendo-card{background:var(--white);border:1.5px solid var(--border-light);border-radius:20px;padding:32px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,.04)}
+    .arriendo-card .head{display:flex;justify-content:space-between;align-items:start;margin-bottom:24px;flex-wrap:wrap;gap:16px}
+    .arriendo-card .identificador{font-family:var(--font-mono);font-size:1rem;font-weight:800;color:var(--coral);background:rgba(240,69,46,.08);padding:6px 14px;border-radius:999px;display:inline-block;margin-bottom:8px}
+    .arriendo-card .curso{font-family:var(--font-display);font-weight:800;font-size:1.4rem;color:var(--black);margin-bottom:4px}
+    .arriendo-card .estado{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:6px 12px;border-radius:8px;display:inline-block}
+    .arriendo-card .estado.lead{background:rgba(255,200,0,.15);color:#B07A00}
+    .arriendo-card .estado.cotizado{background:rgba(0,120,200,.12);color:#0078C8}
+    .arriendo-card .estado.reservado{background:rgba(240,69,46,.12);color:var(--coral)}
+    .arriendo-card .estado.confirmado{background:rgba(34,197,94,.12);color:#16a34a}
+    .arriendo-card .estado.retirado{background:rgba(120,80,200,.12);color:#7850C8}
+    .arriendo-card .estado.devuelto,.arriendo-card .estado.cerrado{background:rgba(0,0,0,.06);color:var(--text-muted)}
+    .data-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:20px}
+    .data-cell{background:#FAFAFA;border:1px solid var(--border-light);border-radius:12px;padding:14px}
+    .data-cell .l{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin-bottom:4px}
+    .data-cell .v{font-family:var(--font-mono);font-size:1.05rem;font-weight:700;color:var(--black)}
+    .data-cell .v.price{color:var(--coral)}
+    .data-cell .v.green{color:#16a34a}
+    /* Hitos del arriendo */
+    .hitos{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:20px}
+    .hito{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:#FAFAFA;border:1px solid var(--border-light);font-size:.85rem}
+    .hito.ok{background:rgba(34,197,94,.06);border-color:rgba(34,197,94,.3);color:#16a34a}
+    .hito .dot{width:18px;height:18px;border-radius:50%;background:var(--border-light);display:grid;place-items:center;font-size:.7rem;flex-shrink:0}
+    .hito.ok .dot{background:#16a34a;color:#fff}
+    /* Acciones */
+    .actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+    .actions a,.actions button{flex:1;min-width:180px;padding:14px 20px;border-radius:12px;font-weight:700;font-size:.95rem;text-align:center;cursor:pointer;text-decoration:none;border:none;transition:all .2s;font-family:inherit}
+    .btn-wa{background:#25D366;color:#fff}
+    .btn-wa:hover{background:#1da851}
+    .btn-doc{background:var(--coral);color:#fff}
+    .btn-doc:hover{background:#D63520}
+    .btn-ficha{background:var(--black);color:#fff}
+    .btn-ficha:hover{background:#222}
+    .btn-logout{background:transparent;border:1.5px solid var(--border-light)!important;color:var(--text-muted);font-weight:600}
+    .btn-logout:hover{border-color:var(--text-muted)!important;color:var(--text-dark)}
+    /* Login screen */
+    .login-screen{max-width:480px;margin:0 auto}
+    /* Ficha modal */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:1000;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(8px)}
+    .modal-overlay.active{display:flex}
+    .modal{background:var(--white);border-radius:20px;max-width:780px;width:100%;max-height:90vh;overflow-y:auto;padding:32px;position:relative}
+    .modal h2{font-family:var(--font-display);font-weight:900;font-size:1.6rem;color:var(--black);margin-bottom:6px}
+    .modal .close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:transparent;border:1px solid var(--border-light);color:var(--text-muted);font-size:1.1rem;cursor:pointer}
+    .modal .close:hover{background:var(--text-muted);color:#fff}
+    .ficha-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 40px;gap:10px;margin-bottom:10px;align-items:center}
+    .ficha-row input,.ficha-row select{padding:10px;border:1.5px solid var(--border-light);border-radius:8px;font-size:.9rem;font-family:inherit;outline:none}
+    .ficha-row input:focus,.ficha-row select:focus{border-color:var(--coral)}
+    .ficha-row .rm{background:transparent;border:none;color:var(--text-muted);font-size:1.2rem;cursor:pointer;width:32px;height:32px;border-radius:50%}
+    .ficha-row .rm:hover{background:rgba(229,41,59,.1);color:#E5293B}
+    .ficha-row label{font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--text-muted)}
+    .modal .add-ficha{padding:10px 16px;background:rgba(240,69,46,.08);color:var(--coral);border:1px dashed var(--coral);border-radius:10px;width:100%;cursor:pointer;font-weight:700;font-size:.9rem;font-family:inherit}
+    .modal .save-ficha{padding:14px;background:var(--coral);color:#fff;border:none;border-radius:12px;font-weight:800;font-size:1rem;cursor:pointer;width:100%;margin-top:20px;font-family:inherit}
+    .modal .save-ficha:hover{background:#D63520}
+    .modal .save-ficha:disabled{opacity:.5;cursor:not-allowed}
+    .nota-stock{background:rgba(245,135,30,.08);border:1px solid rgba(245,135,30,.25);border-radius:12px;padding:14px;margin-bottom:16px;font-size:.88rem;color:#7a4500;line-height:1.5}
+    .nota-stock strong{color:#B25E00}
+    .stock-info{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px;padding:14px;background:#FAFAFA;border-radius:12px}
+    .stock-info .talla{text-align:center;padding:8px 4px;background:#fff;border-radius:6px;font-family:var(--font-mono);font-size:.85rem;font-weight:700}
+    .stock-info .talla .n{font-size:.7rem;color:var(--text-muted);font-weight:600;margin-top:2px}
+    .err{background:rgba(229,41,59,.08);border:1px solid rgba(229,41,59,.3);color:#C73244;padding:14px;border-radius:10px;margin-top:14px;font-size:.9rem}
+    .ok-msg{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);color:#16a34a;padding:14px;border-radius:10px;margin-top:14px;font-size:.9rem}
+    .portal-note{margin-top:20px;padding:16px 18px;border-radius:12px;background:rgba(240,69,46,.07);border:1px solid rgba(240,69,46,.22);line-height:1.55}
+    .client-documents{margin-top:16px;padding:16px;border-radius:14px;background:#fafafa;border:1px solid var(--border-light)}
+    .doc-row{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px;text-align:left;border:1px solid var(--border-light);border-radius:10px;background:#fff;cursor:pointer;font:inherit}
+    .doc-row+ .doc-row{margin-top:8px}.doc-row small{display:block;color:var(--text-muted);margin-top:4px}
+    .modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.modal-actions .save-ficha{margin:0}.save-final{background:var(--black)!important}
+    @media(max-width:720px){.modal-overlay{padding:0;align-items:flex-end}.modal{width:100%;max-height:calc(100dvh - env(safe-area-inset-top));padding:26px 16px max(22px,env(safe-area-inset-bottom));border-radius:24px 24px 0 0}.ficha-row{grid-template-columns:1fr 1fr;position:relative;padding:14px 12px;border:1px solid var(--border-light);border-radius:12px}.ficha-row input{grid-column:1/-1}.ficha-row input,.ficha-row select{min-height:44px;font-size:16px}.ficha-row .rm{position:absolute;right:4px;min-width:44px;min-height:44px}.stock-info{grid-template-columns:repeat(2,1fr)}.modal-actions{grid-template-columns:1fr}.modal-actions button{min-height:50px}}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="condiciones.html">Condiciones</a>
+      <a href="catalogo.html">Trajes</a>
+      <a href="solicitud.html">Reservar</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="solicitud.html">Reservar</a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+  <div class="wrap mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="condiciones.html">Condiciones</a>
+    <a href="catalogo.html">Trajes</a>
+    <a href="solicitud.html">Reservar</a>
+    <a href="intranet.html" class="active" aria-current="page">Portal cliente</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="intranet-hero">
+  <div class="wrap">
+    <span class="tag">Portal del cliente</span>
+    <h1>Tu arriendo,<br>en un solo lugar</h1>
+    <p class="lead">Ingresa con tu código de acceso para revisar tu arriendo, completar tu ficha de tallaje y descargar tus documentos.</p>
+  </div>
+</section>
+
+<!-- LOGIN -->
+<section class="section section-light" style="padding:32px 0 96px" id="login-screen">
+  <div class="wrap">
+    <div class="login-screen">
+      <div class="intranet-card">
+        <div class="label">Código de acceso</div>
+        <input type="text" id="codigo" placeholder="Pega aquí tu código privado" autocomplete="off" spellcheck="false" maxlength="96">
+        <button class="btn-login" type="button">Ingresar a mi arriendo</button>
+        <div id="login-err" class="err" style="display:none"></div>
+        <p class="intranet-help">
+          Tu código privado llega cuando confirmamos tu solicitud. Por seguridad dura solo durante esta sesión y nunca se agrega a la dirección de la página.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="section section-light" style="padding:32px 0 96px;display:none" id="dash-screen">
+  <div class="wrap">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px">
+      <div>
+        <span class="tag" style="display:inline-block;color:var(--coral);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em">Hola, <span id="cliente-nombre">cliente</span></span>
+        <h2 style="font-family:var(--font-display);font-weight:900;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--black);margin-top:8px">Tus arriendos</h2>
+      </div>
+      <button class="btn-logout" type="button">Cerrar sesión</button>
+    </div>
+    <div id="arriendos-list"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- MODAL FICHA -->
+<div class="modal-overlay" id="modal-ficha">
+  <div class="modal">
+    <button class="close" type="button" aria-label="Cerrar">×</button>
+    <h2>Ficha de tallaje</h2>
+    <p style="color:var(--text-muted);margin-bottom:18px" id="modal-arriendo-info">—</p>
+
+    <div class="nota-stock">
+      <strong>Importante sobre tallas y disponibilidad:</strong>
+      Las tallas se asignan según disponibilidad real para tu fecha. Si piden 50 talla S y solo quedan 40, los apoderados deben priorizar: las más flacas con las tallas que queden disponibles (XS/S), las más rellenas con las tallas grandes (L/XL/2XL). Los trajes son bastante acomodables. Ejemplo: 8 mujeres flaquitas + 8 más rellenas → las flacas toman XS/S/M que sobren, las rellenas L/XL disponibles.
+    </div>
+
+    <div class="stock-info">
+      <div class="talla">XS<br><span class="n" id="st-xs">—</span></div>
+      <div class="talla">S<br><span class="n" id="st-s">—</span></div>
+      <div class="talla">M<br><span class="n" id="st-m">—</span></div>
+      <div class="talla">L<br><span class="n" id="st-l">—</span></div>
+      <div class="talla">XL<br><span class="n" id="st-xl">—</span></div>
+      <div class="talla">2XL<br><span class="n" id="st-2xl">—</span></div>
+      <div class="talla">3XL<br><span class="n" id="st-3xl">—</span></div>
+    </div>
+
+    <div style="margin:24px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;color:var(--text-muted)">
+      <div>Nombre alumno</div>
+      <div>Género</div>
+      <div>Color</div>
+      <div>Talla chaq.</div>
+      <div>Talla falda</div>
+    </div>
+
+    <div id="fichas-container"></div>
+
+    <button class="add-ficha" type="button">+ Agregar alumno</button>
+    <div class="modal-actions">
+      <button class="save-ficha" id="btn-save-ficha" type="button">Guardar borrador</button>
+      <button class="save-ficha save-final" id="btn-final-ficha" type="button">Revisar y enviar ficha final</button>
+    </div>
+    <div id="ficha-msg"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></div>
+      <p>Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p>
+    </div>
+    <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a></div>
+    <div class="footer-col"><h4>Reservar</h4><a href="solicitud.html">Nueva solicitud</a><a href="condiciones.html">Condiciones</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="privacidad.html">Privacidad</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 SyT SpA</span><span>$35.000 + $10.000 garantía reembolsable</span></div>
+</footer>
+
+<a class="fab" data-wa="Hola Sol y Tierra. Quiero cotizar." href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2a9.9 9.9 0 00-8.47 15.03L2.5 21.5l4.58-1.05A9.96 9.96 0 1012.04 2zm5.82 14.35c-.25.7-1.24 1.28-1.98 1.45-.53.11-1.22.2-3.55-.76-2.98-1.23-4.9-4.25-5.05-4.45-.14-.2-1.2-1.6-1.2-3.06 0-1.45.74-2.16 1-2.45.26-.29.58-.36.77-.36h.56c.18.01.42-.06.66.5.25.6.84 2.06.91 2.2.08.15.13.32.03.52-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.23 1.6 1.99 1.1.98 2.02 1.28 2.31 1.42.29.15.46.13.63-.07.17-.2.72-.84.92-1.13.19-.29.38-.24.65-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.12.07.68-.18 1.38z"/></svg></a>
+
+<script src="assets/js/intranet.js" defer></script>
+<script src="assets/js/premium.js?v=20260805-3" defer></script>
+<script src="assets/js/sol.js?v=20260805-4" defer></script>
+</body>
+</html>

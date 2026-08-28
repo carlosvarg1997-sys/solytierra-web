@@ -22,20 +22,19 @@
     <nav class="nav-links">
       <a href="index.html">Inicio</a>
       <div class="nav-dropdown">
-        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <a href="catalogo.html" class="nav-dropdown-trigger">Trajes & Servicios ▾</a>
         <div class="nav-dropdown-menu">
           <a href="catalogo.html">Catálogo de Trajes</a>
-          <a href="valorizacion.html">Valorización y Precios</a>
-          <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+          <a href="index.html#precios">Estructura de Precios</a>
           <a href="guia-tallaje.html">Guía de Tallas</a>
         </div>
       </div>
       <div class="nav-dropdown active">
-        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <a href="condiciones.html" class="nav-dropdown-trigger active">Condiciones & Garantía ▾</a>
         <div class="nav-dropdown-menu">
-          <a href="condiciones.html" class="active">Reglamento de Arriendo</a>
-          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
-          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="condiciones.html">Acuerdos y Reglamento</a>
+          <a href="condiciones.html#garantia">Política de Garantía ($10.000)</a>
+          <a href="condiciones.html#transporte">Transporte en Auto Cerrado</a>
           <a href="condiciones.html#faq">Preguntas Frecuentes</a>
         </div>
       </div>
@@ -71,41 +70,92 @@
     <h1 style="margin-bottom:16px">Reglas claras. Sin sorpresas.</h1>
     <p style="font-size:1.12rem;color:var(--text-muted)">Estas reglas protegen a tu curso y a los demás colegios que usan los trajes el mismo día. Si todo está claro, la coordinación fluye.</p>
   </div>
-</section>
+</sectio<section class="section section-light conditions-stage" id="garantia" style="padding:32px 0 88px">
+  <div class="wrap" style="max-width:860px">
+    <div style="text-align:center;margin-bottom:36px">
+      <span class="tag" style="background:var(--coral);color:#fff;margin-bottom:12px;display:inline-block">10 acuerdos esenciales</span>
+      <h2 style="font-size:clamp(1.9rem,4vw,2.6rem);color:var(--text-dark)">Condiciones y Reglamento de Arriendo</h2>
+      <p style="color:var(--text-muted);font-size:1.05rem">Haz clic en cada acuerdo para desplegar el detalle completo sin necesidad de avanzar slider por slider.</p>
+    </div>
 
-<!-- CONDICIONES GUIADAS -->
-<section class="section section-light conditions-stage" id="garantia" style="padding:32px 0 88px">
-  <div class="wrap">
-    <div class="condition-deck" data-condition-deck data-ready="true">
-      <div class="condition-deck-head">
-        <div><span class="tag">10 acuerdos esenciales</span><p>Avanza punto por punto. No quitamos información: la ordenamos para que puedas comprenderla y recordarla.</p></div>
-        <strong class="condition-count" data-condition-count aria-live="polite">01 / 10</strong>
-      </div>
-      <div class="condition-progress" role="tablist" aria-label="Condiciones de arriendo">
-        <button class="condition-tab is-active" type="button" role="tab" data-condition-index="0" aria-selected="true">Precio</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="1" aria-selected="false">Reserva</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="2" aria-selected="false">Tallaje</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="3" aria-selected="false">Transporte</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="4" aria-selected="false">Horarios</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="5" aria-selected="false">Atrasos</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="6" aria-selected="false">Uso</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="7" aria-selected="false">Lluvia</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="8" aria-selected="false">Documento</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="9" aria-selected="false">Daños</button>
-      </div>
-      <div class="condition-slides">
-        <article class="condition-slide is-active" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>01</span><small>Dinero</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Qué estás pagando</span><h2>Precio y Garantía Representativa</h2><p>El arriendo cuesta <strong>$35.000 por traje</strong> de 8 piezas. La garantía es de <strong>$10.000 por traje como depósito simbólico</strong> para facilitar el arriendo del curso y no retener grandes montos de fianza. Si ocurre un daño o pérdida, no se salda con los $10.000: se evalúa y cubre según la <strong>tabla oficial de valorización por pieza</strong>. Si todo vuelve a tiempo y completo, tu garantía vuelve al 100%.</p><div class="condition-key">Los $10.000 son un depósito representativo, no un tope de daños.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>02</span><small>Fecha</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Cómo asegurar disponibilidad</span><h2>Reserva</h2><p>Para agendar la fecha se paga el <strong>50% del arriendo + la garantía completa</strong> ($27.500 por alumno). El saldo restante ($17.500) se paga hasta <strong>24 horas antes</strong> del retiro. Sin reserva pagada no hay trajes asegurados.</p><div class="condition-key">La solicitud por sí sola no bloquea la fecha.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>03</span><small>Tallas</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Prueba antes del evento</span><h2>Tallaje</h2><p>Entregamos un <strong>set de muestras</strong> para que los alumnos prueben tallas antes de la entrega final. El set se devuelve en <strong>3 días</strong>. El traje limpio se entrega cerca de la presentación.</p><div class="condition-key">Las muestras no son los trajes del evento.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>04</span><small>Cuidado</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Desde el primer minuto</span><h2>Transporte</h2><p>El retiro y devolución son responsabilidad del colegio. Se requiere <strong>vehículo cerrado con espacio amplio</strong> (auto, SUV o familiar). Penachos y accesorios no deben ir apretados. No se permite camioneta descubierta.</p><div class="condition-key">Una sola fila de penachos, sin apilar ni comprimir.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>05</span><small>Horarios</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Entrega noche previa y devolución post-baile</span><h2>Horarios Reales de Retiro y Devolución</h2><p>Para evitar carreras en la mañana del evento, el vestuario se retira la <strong>noche anterior entre 18:00 y 22:30</strong>. La devolución se realiza estrictamente <strong>dentro de las 3 horas posteriores al término de la presentación</strong> de tu curso.</p><div class="condition-key">Retiro la noche previa · Devolución 3h post-baile.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>06</span><small>Horario</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Tolerancia y descuentos</span><h2>Atrasos y multas</h2><p>Hay <strong>10 minutos de tolerancia</strong>. Entre 11 y 25 min se descuenta el <strong>30%</strong> de la garantía. Entre 26 y 45 min, el <strong>80%</strong>. Más de 45 min, el <strong>100%</strong> de la garantía.</p><div class="condition-key">Planifica carga y traslado antes de la hora acordada.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>07</span><small>Vestuario</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Adaptabilidad y cuidado de plumas</span><h2>Uso del vestuario y Penachos</h2><p>El traje está diseñado para adaptarse con <strong>cordón tripolino y ojalillos</strong> (la abertura en la espalda es normal y el penacho la cubre). Prohibido coser o pegar. <strong>Los penachos (no "alas") se colocan en el último minuto antes de entrar a bailar</strong>. Cuidado extremo al abrazarse o posar para fotos grupales para no quebrar plumas.</p><div class="condition-key">Penachos al último minuto · Cuidado en fotos grupales.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>08</span><small>Evento</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Cuando el clima cambia el plan</span><h2>Lluvia y fuerza mayor</h2><p>Si el evento se suspende por <strong>lluvia o fuerza mayor</strong> y no se puede reprogramar, se devuelve el <strong>70% del arriendo</strong> y la garantía completa. Evaluamos caso a caso.</p><div class="condition-key">Primero revisamos si existe una fecha de reemplazo.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>09</span><small>Firma</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Confianza mutua y formalidad</span><h2>Reunión presencial con Loreto</h2><p>La reunión es para <strong>conocernos mutuamente y generar confianza</strong>: tú ves la calidad del vestuario y Loreto conoce al responsable que responde por el curso. Si no pudiste imprimir el compromiso en tu casa, <strong>lo imprimimos y firmamos acá en el taller</strong>.</p><div class="condition-key">Reunión de confianza mutua · Si no tienes impresora, lo hacemos acá.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>10</span><small>Garantía</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Tabla oficial de reposición</span><h2>Daños, pérdidas y siguiente arriendo</h2><p>Una pieza dañada o perdida no se salda con los $10.000 de garantía: se cobra según su <strong>valor real de reposición en taller</strong> (ver tabla de valorización). Además, el daño perjudica al colegio que baila después.</p><div class="condition-key">Reposición por pieza según tabla oficial.</div></div></article>
-      </div>
-      <div class="condition-controls"><button class="condition-nav" type="button" data-condition-prev>← Anterior</button><button class="condition-nav condition-nav-next" type="button" data-condition-next>Siguiente →</button></div>
+    <div class="faq-group">
+      <details class="faq-card" open>
+        <summary>01 · Precio y Garantía Representativa ($10.000)</summary>
+        <div class="faq-answer">
+          <p>El arriendo cuesta <strong>$35.000 por traje</strong> de 8 piezas completas. La garantía es de <strong>$10.000 por traje como depósito simbólico</strong> para facilitar el arriendo del curso y no retener grandes montos de fianza a los apoderados.</p>
+          <p>Si ocurre un daño o pérdida, no se salda con los $10.000: se evalúa y cubre según la <strong>tabla oficial de valorización por pieza</strong>. Si todo vuelve a tiempo y completo, tu garantía retorna al 100% íntegra a tu cuenta.</p>
+          <div class="faq-keynote"><strong>Regla clave:</strong> Los $10.000 son un depósito representativo, no un tope de daños.</div>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>02 · Reserva y Bloqueo de Fecha ($27.500 para reservar)</summary>
+        <div class="faq-answer">
+          <p>Para agendar la fecha se paga el <strong>50% del arriendo ($17.500) + la garantía completa ($10.000)</strong>, dando un total de <strong>$27.500 por alumno</strong>.</p>
+          <p>El saldo restante de $17.500 se transfiere hasta <strong>24 horas antes</strong> del retiro. Sin reserva pagada no hay trajes asegurados en el calendario de septiembre.</p>
+          <div class="faq-keynote"><strong>Importante:</strong> La cotización inicial no bloquea el cupo hasta confirmar la reserva.</div>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>03 · Set de Tallaje de Prueba (3 días)</summary>
+        <div class="faq-answer">
+          <p>Entregamos un <strong>set de muestras</strong> para que los alumnos prueben tallas en su colegio antes de la entrega final. El set se devuelve en <strong>3 días</strong>.</p>
+          <p>Puedes combinar tallas de arriba y abajo libremente. El traje definitivo y limpio de taller se entrega cerca de la presentación escolar.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>04 · Transporte Obligatorio en Auto Cerrado</summary>
+        <div class="faq-answer">
+          <p>El retiro y devolución son responsabilidad del colegio o apoderado designado. Se requiere <strong>vehículo cerrado amplio</strong> (auto, SUV o familiar).</p>
+          <p><strong>Los penachos viajan en una sola fila a lo largo del asiento trasero</strong>, de perfil y apoyados en la base. Prohibidas camionetas abiertas o apilar peso sobre las plumas.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>05 · Horarios de Retiro y Devolución</summary>
+        <div class="faq-answer">
+          <p>El vestuario se retira con un <strong>mínimo de 3 horas de antelación al evento (o la noche previa entre 18:00 y 22:30 según coordinación)</strong> para llegar tranquilos a la mañana escolar.</p>
+          <p>La devolución se realiza estrictamente <strong>dentro de las 3 horas posteriores al término del baile</strong> del curso.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>06 · Tolerancia y Multas por Atraso</summary>
+        <div class="faq-answer">
+          <p>Existe una <strong>tolerancia de 10 minutos</strong> en el horario acordado de devolución. De 11 a 25 min de retraso se descuenta el 30% de la garantía; de 26 a 45 min el 80%; y más de 45 min la garantía completa.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>07 · Uso del Vestuario y Cuidado de Penachos</summary>
+        <div class="faq-answer">
+          <p>El traje está confeccionado para adaptarse con <strong>cordón tripolino macramé y ojalillos</strong>. Que quede un espacio abierto de 5 a 10 cm en la espalda es normal y el penacho la cubre.</p>
+          <p><strong>Los niños deben colocarse los penachos recién en el último minuto antes de salir a bailar</strong>. Cuidado especial en fotos grupales para no aplastar ni quebrar plumas.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>08 · Suspensión por Lluvia o Fuerza Mayor</summary>
+        <div class="faq-answer">
+          <p>Si la presentación escolar se suspende por lluvia o fuerza mayor y no es posible reprogramar fecha, se devuelve el <strong>70% del arriendo</strong> y la garantía completa al 100%.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>09 · Reunión Presencial de Confianza con Loreto</summary>
+        <div class="faq-answer">
+          <p>La reunión presencial en taller sirve para conocernos: tú compruebas la calidad e higiene del vestuario y Loreto conoce al apoderado o profesor responsable. Si no pudiste imprimir el compromiso, <strong>lo imprimimos y firmamos en bodega</strong>.</p>
+        </div>
+      </details>
+
+      <details class="faq-card">
+        <summary>10 · Reposición por Piezas según Tabla Oficial</summary>
+        <div class="faq-answer">
+          <p>En caso de extravío o rotura de alguna pieza, el cobro cubre el <strong>valor real de reposición en taller fijado en la tabla oficial</strong>. Transparencia total sin cobros arbitrarios.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>

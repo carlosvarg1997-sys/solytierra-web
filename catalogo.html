@@ -22,7 +22,7 @@
     <nav class="nav-links">
       <a href="index.html">Inicio</a>
       <div class="nav-dropdown active">
-        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <a href="catalogo.html" class="nav-dropdown-trigger active">Trajes & Servicios ▾</a>
         <div class="nav-dropdown-menu">
           <a href="catalogo.html" class="active">Catálogo de Trajes</a>
           <a href="valorizacion.html">Valorización y Precios</a>
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="nav-dropdown">
-        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <a href="condiciones.html" class="nav-dropdown-trigger">Condiciones & Garantía ▾</a>
         <div class="nav-dropdown-menu">
           <a href="condiciones.html">Reglamento de Arriendo</a>
           <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
@@ -94,114 +94,242 @@
 
     <!-- ROJO -->
     <article class="traje-stack-item" id="traje-rojo">
-      <div class="ts-top">
-        <span class="ts-num">01</span>
-        <div>
-          <p class="ts-cat">Rojo</p>
-          <h3>Traje Rojo</h3>
-          <p class="ts-desc">Conjunto completo de 8 piezas en color rojo con plumas a tono para hombre y mujer. Disponible en tallas S a 2XL.</p>
+      <div class="traje-media-col">
+        <div class="carousel" data-carousel>
+          <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
+          <div class="carousel-track">
+            <img src="assets/images/oficiales/rojo-mujer.webp" width="800" height="1067" alt="Traje de Tobas rojo para mujer">
+            <img src="assets/images/oficiales/rojo-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas rojo para hombre">
+          </div>
+          <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
+          <div class="carousel-dots" data-dots></div>
         </div>
-        <span class="ts-price">$35.000</span>
       </div>
-      <div class="carousel" data-carousel>
-        <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
-        <div class="carousel-track">
-          <img src="assets/images/oficiales/rojo-mujer.webp" width="800" height="1067" alt="Traje de Tobas rojo para mujer">
-          <img src="assets/images/oficiales/rojo-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas rojo para hombre">
+      <div class="traje-info-col">
+        <div class="ts-top" style="padding:0;margin-bottom:14px;border:none;display:block">
+          <span class="tag" style="background:#dc2626;color:#fff;margin-bottom:8px;display:inline-block">Rojo</span>
+          <h3 style="font-size:1.8rem;margin:4px 0 6px;color:var(--text-dark)">Traje Rojo</h3>
+          <p class="ts-desc" style="font-size:.92rem;color:var(--text-muted);margin:0">Conjunto completo de 8 piezas en color rojo con plumas a tono para hombre y mujer. Disponible en tallas escolares y adultos.</p>
         </div>
-        <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
-        <div class="carousel-dots" data-dots></div>
+
+        <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:16px;padding:16px;margin-bottom:18px">
+          <span style="font-size:.78rem;font-weight:800;color:var(--text-dark);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:8px">✓ Qué incluye el traje (8 piezas completas)</span>
+          <ul class="checklist-included">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Penacho de plumas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Peto / Chaqueta bordada</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Falda / Faldón</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Arco ceremonial</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de puñeras</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de polainas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cintas tradicionales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Set de prueba x 3 días</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:.84rem;font-weight:700;color:var(--text-dark)">Seleccionar Talla:</span>
+            <button onclick="document.getElementById('tallas-modal').showModal()" style="background:none;border:none;color:var(--coral);font-weight:700;font-size:.82rem;cursor:pointer">📐 Ver tabla de medidas</button>
+          </div>
+          <div class="size-chips">
+            <button type="button" class="size-chip">10</button>
+            <button type="button" class="size-chip">12</button>
+            <button type="button" class="size-chip">14</button>
+            <button type="button" class="size-chip">16</button>
+            <button type="button" class="size-chip active">S</button>
+            <button type="button" class="size-chip">M</button>
+            <button type="button" class="size-chip">L</button>
+          </div>
+        </div>
+
+        <div class="ts-info-grid" style="margin-bottom:18px">
+          <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
+          <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
+          <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
+        </div>
+
+        <a class="btn btn-primary btn-block" href="solicitud.html?color=Rojo" style="padding:13px 20px;font-size:.98rem;text-align:center">Elegir rojo y cotizar por WhatsApp →</a>
       </div>
-      <div class="ts-info-grid">
-        <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
-        <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
-        <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
-      </div>
-      <div style="padding:0 36px 32px"><a class="btn btn-primary btn-block" href="solicitud.html?color=Rojo">Elegir rojo y cotizar</a></div>
     </article>
 
     <!-- AZUL -->
     <article class="traje-stack-item" id="traje-azul">
-      <div class="ts-top">
-        <span class="ts-num">02</span>
-        <div>
-          <p class="ts-cat">Azul</p>
-          <h3>Traje Azul</h3>
-          <p class="ts-desc">Conjunto completo de 8 piezas en color azul con plumas a tono para hombre y mujer. Disponible en tallas S a 2XL.</p>
+      <div class="traje-media-col">
+        <div class="carousel" data-carousel>
+          <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
+          <div class="carousel-track">
+            <img src="assets/images/oficiales/azul-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas azul para mujer">
+            <img src="assets/images/oficiales/azul-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas azul para hombre">
+          </div>
+          <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
+          <div class="carousel-dots" data-dots></div>
         </div>
-        <span class="ts-price">$35.000</span>
       </div>
-      <div class="carousel" data-carousel>
-        <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
-        <div class="carousel-track">
-          <img src="assets/images/oficiales/azul-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas azul para mujer">
-          <img src="assets/images/oficiales/azul-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas azul para hombre">
+      <div class="traje-info-col">
+        <div class="ts-top" style="padding:0;margin-bottom:14px;border:none;display:block">
+          <span class="tag" style="background:#2563eb;color:#fff;margin-bottom:8px;display:inline-block">Azul</span>
+          <h3 style="font-size:1.8rem;margin:4px 0 6px;color:var(--text-dark)">Traje Azul</h3>
+          <p class="ts-desc" style="font-size:.92rem;color:var(--text-muted);margin:0">Conjunto completo de 8 piezas en color azul con plumas a tono para hombre y mujer. Disponible en tallas escolares y adultos.</p>
         </div>
-        <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
-        <div class="carousel-dots" data-dots></div>
+
+        <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:16px;padding:16px;margin-bottom:18px">
+          <span style="font-size:.78rem;font-weight:800;color:var(--text-dark);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:8px">✓ Qué incluye el traje (8 piezas completas)</span>
+          <ul class="checklist-included">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Penacho de plumas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Peto / Chaqueta bordada</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Falda / Faldón</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Arco ceremonial</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de puñeras</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de polainas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cintas tradicionales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Set de prueba x 3 días</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:.84rem;font-weight:700;color:var(--text-dark)">Seleccionar Talla:</span>
+            <button onclick="document.getElementById('tallas-modal').showModal()" style="background:none;border:none;color:var(--coral);font-weight:700;font-size:.82rem;cursor:pointer">📐 Ver tabla de medidas</button>
+          </div>
+          <div class="size-chips">
+            <button type="button" class="size-chip">10</button>
+            <button type="button" class="size-chip">12</button>
+            <button type="button" class="size-chip">14</button>
+            <button type="button" class="size-chip">16</button>
+            <button type="button" class="size-chip active">S</button>
+            <button type="button" class="size-chip">M</button>
+            <button type="button" class="size-chip">L</button>
+          </div>
+        </div>
+
+        <div class="ts-info-grid" style="margin-bottom:18px">
+          <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
+          <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
+          <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
+        </div>
+
+        <a class="btn btn-primary btn-block" href="solicitud.html?color=Azul" style="padding:13px 20px;font-size:.98rem;text-align:center">Elegir azul y cotizar por WhatsApp →</a>
       </div>
-      <div class="ts-info-grid">
-        <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
-        <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
-        <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
-      </div>
-      <div style="padding:0 36px 32px"><a class="btn btn-primary btn-block" href="solicitud.html?color=Azul">Elegir azul y cotizar</a></div>
     </article>
 
     <!-- FUCSIA -->
     <article class="traje-stack-item" id="traje-fucsia">
-      <div class="ts-top">
-        <span class="ts-num">03</span>
-        <div>
-          <p class="ts-cat">Fucsia</p>
-          <h3>Traje Fucsia</h3>
-          <p class="ts-desc">Conjunto completo de 8 piezas en color fucsia con plumas a tono para hombre y mujer. Disponible en tallas S a 2XL.</p>
+      <div class="traje-media-col">
+        <div class="carousel" data-carousel>
+          <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
+          <div class="carousel-track">
+            <img src="assets/images/oficiales/fucsia-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas fucsia para mujer">
+            <img src="assets/images/oficiales/fucsia-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas fucsia para hombre">
+          </div>
+          <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
+          <div class="carousel-dots" data-dots></div>
         </div>
-        <span class="ts-price">$35.000</span>
       </div>
-      <div class="carousel" data-carousel>
-        <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
-        <div class="carousel-track">
-          <img src="assets/images/oficiales/fucsia-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas fucsia para mujer">
-          <img src="assets/images/oficiales/fucsia-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas fucsia para hombre">
+      <div class="traje-info-col">
+        <div class="ts-top" style="padding:0;margin-bottom:14px;border:none;display:block">
+          <span class="tag" style="background:#db2777;color:#fff;margin-bottom:8px;display:inline-block">Fucsia</span>
+          <h3 style="font-size:1.8rem;margin:4px 0 6px;color:var(--text-dark)">Traje Fucsia</h3>
+          <p class="ts-desc" style="font-size:.92rem;color:var(--text-muted);margin:0">Conjunto completo de 8 piezas en color fucsia con plumas a tono para hombre y mujer. Disponible en tallas escolares y adultos.</p>
         </div>
-        <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
-        <div class="carousel-dots" data-dots></div>
+
+        <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:16px;padding:16px;margin-bottom:18px">
+          <span style="font-size:.78rem;font-weight:800;color:var(--text-dark);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:8px">✓ Qué incluye el traje (8 piezas completas)</span>
+          <ul class="checklist-included">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Penacho de plumas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Peto / Chaqueta bordada</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Falda / Faldón</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Arco ceremonial</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de puñeras</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de polainas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cintas tradicionales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Set de prueba x 3 días</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:.84rem;font-weight:700;color:var(--text-dark)">Seleccionar Talla:</span>
+            <button onclick="document.getElementById('tallas-modal').showModal()" style="background:none;border:none;color:var(--coral);font-weight:700;font-size:.82rem;cursor:pointer">📐 Ver tabla de medidas</button>
+          </div>
+          <div class="size-chips">
+            <button type="button" class="size-chip">10</button>
+            <button type="button" class="size-chip">12</button>
+            <button type="button" class="size-chip">14</button>
+            <button type="button" class="size-chip">16</button>
+            <button type="button" class="size-chip active">S</button>
+            <button type="button" class="size-chip">M</button>
+            <button type="button" class="size-chip">L</button>
+          </div>
+        </div>
+
+        <div class="ts-info-grid" style="margin-bottom:18px">
+          <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
+          <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
+          <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
+        </div>
+
+        <a class="btn btn-primary btn-block" href="solicitud.html?color=Fucsia" style="padding:13px 20px;font-size:.98rem;text-align:center">Elegir fucsia y cotizar por WhatsApp →</a>
       </div>
-      <div class="ts-info-grid">
-        <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
-        <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
-        <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
-      </div>
-      <div style="padding:0 36px 32px"><a class="btn btn-primary btn-block" href="solicitud.html?color=Fucsia">Elegir fucsia y cotizar</a></div>
     </article>
 
     <!-- MORADO -->
     <article class="traje-stack-item" id="traje-morado">
-      <div class="ts-top">
-        <span class="ts-num">04</span>
-        <div>
-          <p class="ts-cat">Morado</p>
-          <h3>Traje Morado</h3>
-          <p class="ts-desc">Conjunto completo de 8 piezas en color morado con plumas a tono para hombre y mujer. Disponible en tallas S a 2XL.</p>
+      <div class="traje-media-col">
+        <div class="carousel" data-carousel>
+          <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
+          <div class="carousel-track">
+            <img src="assets/images/oficiales/morado-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas morado para mujer">
+            <img src="assets/images/oficiales/morado-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas morado para hombre">
+          </div>
+          <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
+          <div class="carousel-dots" data-dots></div>
         </div>
-        <span class="ts-price">$35.000</span>
       </div>
-      <div class="carousel" data-carousel>
-        <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
-        <div class="carousel-track">
-          <img src="assets/images/oficiales/morado-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas morado para mujer">
-          <img src="assets/images/oficiales/morado-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas morado para hombre">
+      <div class="traje-info-col">
+        <div class="ts-top" style="padding:0;margin-bottom:14px;border:none;display:block">
+          <span class="tag" style="background:#7c3aed;color:#fff;margin-bottom:8px;display:inline-block">Morado</span>
+          <h3 style="font-size:1.8rem;margin:4px 0 6px;color:var(--text-dark)">Traje Morado</h3>
+          <p class="ts-desc" style="font-size:.92rem;color:var(--text-muted);margin:0">Conjunto completo de 8 piezas en color morado con plumas a tono para hombre y mujer. Disponible en tallas escolares y adultos.</p>
         </div>
-        <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
-        <div class="carousel-dots" data-dots></div>
+
+        <div style="background:#f8fafc;border:1px solid var(--border-light);border-radius:16px;padding:16px;margin-bottom:18px">
+          <span style="font-size:.78rem;font-weight:800;color:var(--text-dark);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:8px">✓ Qué incluye el traje (8 piezas completas)</span>
+          <ul class="checklist-included">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Penacho de plumas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Peto / Chaqueta bordada</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Falda / Faldón</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Arco ceremonial</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de puñeras</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Par de polainas</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Cintas tradicionales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Set de prueba x 3 días</li>
+          </ul>
+        </div>
+
+        <div style="margin-bottom:16px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:.84rem;font-weight:700;color:var(--text-dark)">Seleccionar Talla:</span>
+            <button onclick="document.getElementById('tallas-modal').showModal()" style="background:none;border:none;color:var(--coral);font-weight:700;font-size:.82rem;cursor:pointer">📐 Ver tabla de medidas</button>
+          </div>
+          <div class="size-chips">
+            <button type="button" class="size-chip">10</button>
+            <button type="button" class="size-chip">12</button>
+            <button type="button" class="size-chip">14</button>
+            <button type="button" class="size-chip">16</button>
+            <button type="button" class="size-chip active">S</button>
+            <button type="button" class="size-chip">M</button>
+            <button type="button" class="size-chip">L</button>
+          </div>
+        </div>
+
+        <div class="ts-info-grid" style="margin-bottom:18px">
+          <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
+          <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
+          <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
+        </div>
+
+        <a class="btn btn-primary btn-block" href="solicitud.html?color=Morado" style="padding:13px 20px;font-size:.98rem;text-align:center">Elegir morado y cotizar por WhatsApp →</a>
       </div>
-      <div class="ts-info-grid">
-        <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
-        <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
-        <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
-      </div>
-      <div style="padding:0 36px 32px"><a class="btn btn-primary btn-block" href="solicitud.html?color=Morado">Elegir morado y cotizar</a></div>
     </article>
 
   </div>
@@ -577,6 +705,71 @@ window.addEventListener('scroll', () => {
   });
 });
 </script>
+<!-- MODAL GUIA DE TALLAS -->
+<dialog id="tallas-modal" style="border:none;border-radius:24px;padding:0;max-width:680px;width:92%;box-shadow:0 25px 50px -12px rgba(0,0,0,0.25);background:#fff;margin:auto">
+  <div style="padding:28px;position:relative">
+    <button onclick="document.getElementById('tallas-modal').close()" style="position:absolute;right:20px;top:20px;background:#f3f4f6;border:none;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;color:var(--text-dark);display:flex;align-items:center;justify-content:center">&times;</button>
+    <span class="tag" style="background:rgba(240,69,46,.1);color:var(--coral);margin-bottom:10px;display:inline-block">Guía Oficial de Tallas</span>
+    <h3 style="color:var(--text-dark);margin:0 0 8px;font-size:1.4rem">Tabla de Medidas y Equivalencias Escolares</h3>
+    <p style="font-size:.92rem;color:var(--text-muted);margin-bottom:20px">Revisa la referencia según la estatura y contextura del alumno. El vestuario incluye cordones ajustables.</p>
+    
+    <div style="overflow-x:auto">
+      <table style="width:100%;border-collapse:collapse;font-size:.9rem;text-align:left">
+        <thead>
+          <tr style="border-bottom:2px solid var(--border-light);background:#f8fafc">
+            <th style="padding:12px;color:var(--text-dark)">Talla</th>
+            <th style="padding:12px;color:var(--text-dark)">Edad / Nivel</th>
+            <th style="padding:12px;color:var(--text-dark)">Estatura (cm)</th>
+            <th style="padding:12px;color:var(--text-dark)">Contorno Pecho</th>
+            <th style="padding:12px;color:var(--text-dark)">Contorno Cintura</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border-light)">
+            <td style="padding:10px 12px;font-weight:700">Talla 10</td>
+            <td style="padding:10px 12px">8 - 10 años</td>
+            <td style="padding:10px 12px">130 - 140 cm</td>
+            <td style="padding:10px 12px">68 - 74 cm</td>
+            <td style="padding:10px 12px">60 - 66 cm</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-light)">
+            <td style="padding:10px 12px;font-weight:700">Talla 12</td>
+            <td style="padding:10px 12px">10 - 12 años</td>
+            <td style="padding:10px 12px">140 - 150 cm</td>
+            <td style="padding:10px 12px">74 - 80 cm</td>
+            <td style="padding:10px 12px">66 - 72 cm</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-light)">
+            <td style="padding:10px 12px;font-weight:700">Talla 14 / 16</td>
+            <td style="padding:10px 12px">12 - 15 años</td>
+            <td style="padding:10px 12px">150 - 162 cm</td>
+            <td style="padding:10px 12px">80 - 88 cm</td>
+            <td style="padding:10px 12px">72 - 78 cm</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-light)">
+            <td style="padding:10px 12px;font-weight:700">S / M</td>
+            <td style="padding:10px 12px">Juvenil / Adulto</td>
+            <td style="padding:10px 12px">162 - 175 cm</td>
+            <td style="padding:10px 12px">88 - 98 cm</td>
+            <td style="padding:10px 12px">78 - 86 cm</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 12px;font-weight:700">L / XL</td>
+            <td style="padding:10px 12px">Adulto amplio</td>
+            <td style="padding:10px 12px">175 - 188 cm</td>
+            <td style="padding:10px 12px">98 - 110 cm</td>
+            <td style="padding:10px 12px">86 - 98 cm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div style="background:#f4f3f0;border-radius:12px;padding:14px 18px;margin-top:20px;font-size:.85rem;color:var(--text-muted)">
+      💡 <strong>Set de Prueba incluido:</strong> Entregamos un set de muestra por 3 días para que midas a cada alumno en persona antes de definir el pedido final.
+    </div>
+  </div>
+</dialog>
+
 <script src="assets/js/premium.js?v=20260805-3" defer></script>
 <script src="assets/js/motion.js?v=20260828-1" defer></script>
 <script src="assets/js/sol.js?v=20260805-5" defer></script>

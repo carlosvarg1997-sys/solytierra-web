@@ -1,5 +1,19 @@
 /* Sol y Tierra · capa UX visual 2026-08-05 */
 
+/* Scroll offset profesional: las anclas nunca quedan tapadas por el header ni en blanco */
+html {
+  scroll-behavior: smooth;
+}
+[id] {
+  scroll-margin-top: 96px;
+}
+section[id] {
+  scroll-margin-top: 84px;
+}
+.faq-group[id] {
+  scroll-margin-top: 92px;
+}
+
 /* Marca SyT: elegante, legible a escala de navegación y con presencia en el pie. */
 .brand{gap:0}
 .brand img{width:102px;height:42px;object-fit:contain;object-position:left center}

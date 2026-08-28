@@ -469,4 +469,147 @@ body:has(.req-flow select:focus) .sol-root:not(.is-open){opacity:0;transform:tra
   transform: scale(0.92);
 }
 
+/* 11. Hero Limpio y Cinematográfico (Sin cuadro invasivo) */
+.hero-layout-clean {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  min-height: 520px;
+  position: relative;
+  z-index: 2;
+}
+
+/* 12. Catálogo: Trajes Completos sin Fotos Cortadas */
+.traje-stack-item {
+  position: relative !important;
+  top: auto !important;
+  margin-bottom: 56px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05) !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border-light) !important;
+  overflow: hidden !important;
+}
+.traje-stack-item .carousel {
+  padding: 16px 24px !important;
+  background: #fafafa !important;
+  border-top: 1px solid var(--border-light) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+.traje-stack-item .carousel-track {
+  display: flex !important;
+  gap: 20px !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.traje-stack-item .carousel-track img {
+  flex: 0 1 auto !important;
+  width: auto !important;
+  max-width: 48% !important;
+  height: 480px !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  background: #ffffff !important;
+  border: 1px solid var(--border-light) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04) !important;
+  padding: 10px !important;
+  transition: transform 0.3s var(--anim-spring) !important;
+}
+.traje-stack-item .carousel-track img:hover {
+  transform: scale(1.02) !important;
+}
+@media (max-width: 768px) {
+  .traje-stack-item .carousel {
+    padding: 12px 16px !important;
+  }
+  .traje-stack-item .carousel-track {
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+  }
+  .traje-stack-item .carousel-track img {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    height: 420px !important;
+    scroll-snap-align: center !important;
+  }
+}
+
+/* 13. Presentación Diapositiva por Diapositiva (Condiciones en Slides) */
+.condition-deck[data-ready="true"] .condition-slide {
+  display: none !important;
+}
+.condition-deck[data-ready="true"] .condition-slide.is-active {
+  display: grid !important;
+  animation: slideFadeIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.care-story[data-ready="true"] .care-panel {
+  display: none !important;
+}
+.care-story[data-ready="true"] .care-panel.is-active {
+  display: grid !important;
+  animation: slideFadeIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* 14. Infografía y Alertas Oficiales de Insumos Personales */
+.banner-sin-tripolino {
+  background: #C0392B;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 6px 20px rgba(192, 57, 43, 0.25);
+}
+.banner-sin-tripolino-icon {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+.donde-comprar-box {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 22px 26px;
+  margin-top: 24px;
+  text-align: center;
+}
+.donde-comprar-pills {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  font-weight: 800;
+  font-family: var(--font-display);
+  color: var(--black);
+  letter-spacing: 0.05em;
+}
+.donde-comprar-pills span {
+  padding: 8px 18px;
+  background: #f4f5f7;
+  border-radius: 999px;
+  font-size: 0.92rem;
+}
+
+
 

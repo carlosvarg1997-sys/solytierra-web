@@ -326,6 +326,72 @@
   }
 
   // ─────────────────────────────────────────────────────────────
+  //  Carousels interactivos ([data-carousel])
+  // ─────────────────────────────────────────────────────────────
+  function initCarousels() {
+    const carousels = document.querySelectorAll('[data-carousel]');
+    carousels.forEach((car) => {
+      const track = car.querySelector('.carousel-track');
+      const prevBtn = car.querySelector('[data-prev]');
+      const nextBtn = car.querySelector('[data-next]');
+      const dotsContainer = car.querySelector('[data-dots]');
+      if (!track) return;
+
+      const imgs = track.querySelectorAll('img');
+      if (!imgs.length) return;
+
+      // Crear dots
+      if (dotsContainer && !dotsContainer.children.length) {
+        imgs.forEach((_, idx) => {
+          const dot = document.createElement('span');
+          if (idx === 0) dot.classList.add('active');
+          dot.addEventListener('click', () => {
+            const targetImg = imgs[idx];
+            if (targetImg) {
+              track.scrollTo({
+                left: targetImg.offsetLeft - track.offsetLeft,
+                behavior: 'smooth'
+              });
+            }
+          });
+          dotsContainer.appendChild(dot);
+        });
+      }
+
+      // Actualizar dots en scroll
+      track.addEventListener('scroll', () => {
+        if (!dotsContainer) return;
+        const scrollLeft = track.scrollLeft;
+        let activeIdx = 0;
+        imgs.forEach((img, idx) => {
+          const imgLeft = img.offsetLeft - track.offsetLeft;
+          if (Math.abs(scrollLeft - imgLeft) < track.clientWidth / 2) {
+            activeIdx = idx;
+          }
+        });
+        const dots = dotsContainer.querySelectorAll('span');
+        dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
+      }, { passive: true });
+
+      // Botón siguiente
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          const itemWidth = imgs[0].offsetWidth || 300;
+          track.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+      }
+
+      // Botón anterior
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          const itemWidth = imgs[0].offsetWidth || 300;
+          track.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        });
+      }
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────
   //  Boot
   // ─────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
@@ -337,6 +403,7 @@
     initCounters();
     initCalculatorFeedback();
     initSmoothAccordion();
+    initCarousels();
   });
 
   // Exponer para uso manual desde otros scripts

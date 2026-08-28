@@ -11,7 +11,8 @@
   <meta property="og:image" content="https://arriendostrajestobas.cl/assets/images/hero.webp">
   <meta property="og:url" content="https://arriendostrajestobas.cl/guia-tallaje.html">
   <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+  <link rel="stylesheet" href="assets/css/styt.css?v=20260812-1">
+  <link rel="stylesheet" href="assets/css/site-clarity-v2.css?v=20260828-1">
   <style>
     .section-head{max-width:720px;margin-bottom:42px}.section-head.center{margin-left:auto;margin-right:auto;text-align:center}.lead{font-size:1.12rem;line-height:1.7}.size-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}.size-chip{display:grid;place-items:center;min-height:64px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.06);font:800 1rem var(--font-mono);color:#fff}.flow{counter-reset:step;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.flow article{counter-increment:step}.flow article:before{content:counter(step);display:grid;place-items:center;width:38px;height:38px;margin-bottom:16px;border-radius:50%;background:var(--coral);color:#fff;font:800 .9rem var(--font-mono)}.record-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.record-card{padding:28px;border:1px solid var(--border-light);border-radius:20px;background:#fff}.record-card ul{display:grid;gap:10px;margin:16px 0 0;padding-left:20px}.notice{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:22px;border:1px solid rgba(240,69,46,.35);border-radius:18px;background:rgba(240,69,46,.06)}.notice b{font-size:1.05rem}.notice p{margin-top:5px}@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}.record-grid{grid-template-columns:1fr}}@media(max-width:820px){.guide-hero{grid-template-columns:1fr!important;gap:36px!important}}@media(max-width:520px){.size-grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:1fr}}
   </style>
@@ -19,13 +20,48 @@
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
   <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></a>
-      <nav class="nav-links" aria-label="Principal"><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a><a href="solicitud.html">Reservar</a></nav>
-      <div class="nav-actions"><a class="btn btn-primary" href="solicitud.html">Reservar</a><button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
+  <div class="wrap">
+    <a class="brand" href="index.html">SYT</a>
+    <nav class="nav-links">
+      <a  href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html">Catálogo de Trajes</a>
+          <a href="valorizacion.html">Valorización y Precios</a>
+          <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+          <a href="guia-tallaje.html">Guía de Tallas</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="condiciones.html">Reglamento de Arriendo</a>
+          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
+          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        </div>
+      </div>
+      <a  href="solicitud.html">Reservar</a>
+      <a  href="contacto.html">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
-    <div class="wrap mobile-menu"><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a><a href="solicitud.html">Reservar</a><a href="intranet.html">Portal del cliente</a></div>
-  </header>
+  </div>
+  <div class="wrap mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo de Trajes</a>
+    <a href="valorizacion.html">Valorización y Precios</a>
+    <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+    <a href="guia-tallaje.html">Guía de Tallas</a>
+    <a href="condiciones.html">Condiciones y Garantía</a>
+    <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+    <a href="solicitud.html">Reservar</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</header>
 
   <main id="contenido">
     <section class="section section-dark" style="padding:88px 0 76px">
@@ -68,12 +104,38 @@
     </section>
 
     <section class="section section-light" style="background:#F7F8FA">
-      <div class="wrap section-head"><span class="tag">Qué debes registrar</span><h2 style="margin-top:14px">Prendas distintas, control separado.</h2></div>
-      <div class="wrap record-grid">
-        <article class="record-card"><span class="tag">Traje femenino</span><h3>Peto y falda</h3><ul><li>Nombre de la estudiante.</li><li>Talla probada y confirmada.</li><li>Observación solo si existe una necesidad concreta.</li></ul></article>
-        <article class="record-card"><span class="tag">Traje masculino</span><h3>Chaqueta y faldón</h3><ul><li>Nombre del estudiante.</li><li>Talla probada y confirmada.</li><li>Observación solo si existe una necesidad concreta.</li></ul></article>
+      <div class="wrap section-head">
+        <span class="tag" style="background:var(--coral);color:#fff">El <strong data-counter="37" data-counter-suffix="%">37%</strong> usa tallas combinadas</span>
+        <h2 style="margin-top:14px">Prendas desacopladas: talla arriba y abajo independiente.</h2>
+        <p class="lead">Nuestras estadísticas reales de más de <strong data-counter="1450" data-counter-suffix="+">1.450+</strong> estudiantes muestran que <strong>el 37% necesita una talla distinta arriba y abajo</strong> (por ejemplo: Peto talla L con Falda talla M). Sol y Tierra te permite combinarlas sin ningún costo adicional.</p>
       </div>
-      <div class="wrap" style="margin-top:22px;text-align:center"><p>Penacho, punteras, polainas y demás accesorios se controlan como parte del traje completo.</p><a class="btn btn-primary" style="margin-top:18px" href="intranet.html">Entrar a la intranet</a></div>
+      <div class="wrap record-grid">
+        <article class="record-card">
+          <span class="tag">Traje femenino</span>
+          <h3>Peto y falda (tallas independientes)</h3>
+          <ul>
+            <li><strong>Peto:</strong> Prioriza el contorno de busto y hombros. Se ajusta con cordón tripolino por detrás.</li>
+            <li><strong>Falda:</strong> Mide la cintura y largo de pierna para que permita saltar con comodidad.</li>
+            <li>Puedes registrar por ejemplo: <em>Peto M / Falda L</em> para la misma alumna.</li>
+          </ul>
+        </article>
+        <article class="record-card">
+          <span class="tag">Traje masculino</span>
+          <h3>Chaqueta y faldón (tallas independientes)</h3>
+          <ul>
+            <li><strong>Chaqueta:</strong> Prioriza ancho de espalda y movilidad de brazos.</li>
+            <li><strong>Faldón:</strong> Cintura con paneles laterales para apertura en saltos.</li>
+            <li>Puedes registrar por ejemplo: <em>Chaqueta L / Faldón M</em> para el mismo alumno.</li>
+          </ul>
+        </article>
+      </div>
+      <div class="wrap" style="margin-top:28px;background:#fff;border:1.5px solid var(--coral);border-radius:16px;padding:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <div>
+          <strong style="color:var(--coral);display:block;font-size:1.1rem">Set de Muestras Prestado por 3 Días</strong>
+          <span style="font-size:.92rem;color:var(--text-muted)">El set incluye 5 muestras de mujer y 4 de hombre. Se prueba a los alumnos con ropa delgada y se devuelve a bodega en 3 días para consolidar tu pedido.</span>
+        </div>
+        <a class="btn btn-primary" href="intranet.html">Cargar tallas en el portal</a>
+      </div>
     </section>
 
     <section class="section">
@@ -86,9 +148,11 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="footer-grid"><div class="footer-col"><div class="footer-brand"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></div><p>Arriendo de vestuario folclórico para colegios. La ubicación de retiro se informa después de confirmar la reserva.</p></div><div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a></div><div class="footer-col"><h4>Reservar</h4><a href="solicitud.html">Solicitud</a><a href="intranet.html">Portal del cliente</a></div><div class="footer-col"><h4>Guías</h4><a href="guia-tallaje.html">Prueba de tallaje</a><a href="guia-visual-traje.html">Partes del traje</a><a href="valorizacion.html">Valores de reposición</a></div></div><div class="footer-bottom"><span>&copy; 2026 SyT SpA</span><span>Traje completo $35.000 + garantía $10.000 reembolsable</span></div></footer>
+  <footer class="site-footer"><div class="footer-grid"><div class="footer-col"><div class="footer-brand">SYT<span></span></div><p>Arriendo de vestuario folclórico para colegios. La ubicación de retiro se informa después de confirmar la reserva.</p></div><div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a></div><div class="footer-col"><h4>Reservar</h4><a href="solicitud.html">Solicitud</a><a href="intranet.html">Portal del cliente</a></div><div class="footer-col"><h4>Guías</h4><a href="guia-tallaje.html">Prueba de tallaje</a><a href="guia-visual-traje.html">Partes del traje</a><a href="valorizacion.html">Valores de reposición</a></div></div><div class="footer-bottom"><span>&copy; 2026 SyT SpA</span><span>Traje completo $35.000 + garantía $10.000 reembolsable</span></div></footer>
 
   <script src="assets/js/premium.js?v=20260805-3" defer></script>
+  <script src="assets/js/motion.js?v=20260828-1" defer></script>
   <script src="assets/js/sol.js?v=20260805-4" defer></script>
+<script>document.querySelectorAll('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.mobile-menu').classList.toggle('open')}));</script>
 </body>
 </html>

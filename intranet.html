@@ -16,7 +16,8 @@
   <meta property="og:image" content="https://arriendostrajestobas.cl/assets/images/references/home-hero.webp">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+  <link rel="stylesheet" href="assets/css/styt.css?v=20260812-1">
+  <link rel="stylesheet" href="assets/css/site-clarity-v2.css?v=20260828-1">
   <style>
     /* === INTRANET === */
     body{background:var(--white);color:var(--text-dark)}
@@ -108,24 +109,45 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></a>
+    <a class="brand" href="index.html">SYT</a>
     <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="condiciones.html">Condiciones</a>
-      <a href="catalogo.html">Trajes</a>
-      <a href="solicitud.html">Reservar</a>
+      <a  href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html">Catálogo de Trajes</a>
+          <a href="valorizacion.html">Valorización y Precios</a>
+          <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+          <a href="guia-tallaje.html">Guía de Tallas</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="condiciones.html">Reglamento de Arriendo</a>
+          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
+          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        </div>
+      </div>
+      <a  href="solicitud.html">Reservar</a>
+      <a  href="contacto.html">Contacto</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary" href="solicitud.html">Reservar</a>
+      <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
       <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
   <div class="wrap mobile-menu">
     <a href="index.html">Inicio</a>
-    <a href="condiciones.html">Condiciones</a>
-    <a href="catalogo.html">Trajes</a>
+    <a href="catalogo.html">Catálogo de Trajes</a>
+    <a href="valorizacion.html">Valorización y Precios</a>
+    <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+    <a href="guia-tallaje.html">Guía de Tallas</a>
+    <a href="condiciones.html">Condiciones y Garantía</a>
+    <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
     <a href="solicitud.html">Reservar</a>
-    <a href="intranet.html" class="active" aria-current="page">Portal cliente</a>
+    <a href="contacto.html">Contacto</a>
   </div>
 </header>
 
@@ -217,7 +239,7 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></div>
+      <div class="footer-brand">SYT<span></span></div>
       <p>Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p>
     </div>
     <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a></div>
@@ -231,6 +253,8 @@
 
 <script src="assets/js/intranet.js" defer></script>
 <script src="assets/js/premium.js?v=20260805-3" defer></script>
+<script src="assets/js/motion.js?v=20260828-1" defer></script>
 <script src="assets/js/sol.js?v=20260805-4" defer></script>
+<script>document.querySelectorAll('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.mobile-menu').classList.toggle('open')}));</script>
 </body>
 </html>

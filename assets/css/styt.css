@@ -37,14 +37,21 @@ h3{font-size:1.15rem;font-weight:700}
 p{line-height:1.7;font-size:1.05rem}
 strong{font-weight:700}
 
-/* === HEADER === */
-.site-header{background:var(--black);position:sticky;top:0;z-index:100;padding:14px 0}
+/* === HEADER PREMIUM (backdrop blur, degradado sutil) === */
+.site-header{background:rgba(12,12,12,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);position:sticky;top:0;z-index:100;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)}
 .site-header .wrap{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--white);font-weight:800;font-size:1rem;font-family:var(--font-display)}
-.brand img{height:34px;width:auto}
-.nav-links{display:flex;gap:32px;font-size:.92rem}
-.nav-links a{color:rgba(255,255,255,.7);font-weight:600;padding:8px 0;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--coral)}
+.brand{display:inline-flex;align-items:center;color:var(--white);font-weight:900;font-size:1.4rem;font-family:var(--font-display);letter-spacing:.05em;line-height:1;text-transform:uppercase}
+.brand:visited,.brand:active{color:var(--white)}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:.92rem}
+.nav-links>a,.nav-links .nav-dropdown-trigger{color:rgba(255,255,255,.75);font-weight:600;padding:10px 0;transition:color .2s;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.nav-links>a:hover,.nav-links>a.active,.nav-dropdown-trigger:hover{color:var(--coral)}
+/* Dropdown Menu */
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(8px);background:#141414;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px 0;min-width:240px;box-shadow:0 12px 40px rgba(0,0,0,.5);opacity:0;visibility:hidden;transition:all .2s ease;z-index:1100}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-dropdown-menu a{display:block;padding:10px 18px;color:rgba(255,255,255,.8);font-size:.88rem;font-weight:500;transition:all .15s}
+.nav-dropdown-menu a:hover{background:rgba(240,69,46,.12);color:var(--white);padding-left:22px}
+.nav-dropdown-menu a.active{color:var(--coral)}
 .nav-actions{display:flex;align-items:center;gap:12px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:700;font-size:.9rem;border-radius:999px;transition:transform .2s,background .2s}
 .btn-primary{background:var(--coral);color:var(--white);padding:11px 24px}
@@ -63,13 +70,15 @@ strong{font-weight:700}
   .mobile-menu a{padding:14px 28px;color:var(--white);font-weight:600;border-bottom:1px solid var(--border-dark)}
 }
 
-/* === LAYOUT === */
+/* === LAYOUT CON DEGRADADOS PREMIUM === */
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
-.section{padding:96px 0}
-.section-dark{background:var(--black);color:var(--white)}
+.section{padding:96px 0;position:relative}
+/* Sección oscura: negro profundo con halo coral sutil */
+.section-dark{background:#0C0C0C;background-image:radial-gradient(ellipse at 50% 0%,rgba(240,69,46,.06) 0%,transparent 60%),linear-gradient(180deg,#121212 0%,#0C0C0C 100%);color:var(--white)}
 .section-dark h1,.section-dark h2,.section-dark h3,.section-dark strong{color:var(--white)}
 .section-dark p{color:rgba(255,255,255,.7)}
-.section-light{background:var(--white);color:var(--text-dark)}
+/* Sección clara: blanco puro con degradado sutil hacia gris-claro */
+.section-light{background:#FFFFFF;background-image:linear-gradient(180deg,#FFFFFF 0%,#FAFAFA 100%);color:var(--text-dark)}
 .section-light h1,.section-light h2,.section-light h3,.section-light strong{color:var(--text-dark)}
 .section-light p{color:var(--text-muted)}
 
@@ -90,8 +99,8 @@ strong{font-weight:700}
 .price{font-family:var(--font-mono);font-weight:700;color:var(--coral)}
 .num{font-family:var(--font-mono);font-size:2.2rem;font-weight:800;color:var(--coral);display:block;line-height:1;margin-bottom:12px}
 
-/* === FOOTER === */
-.site-footer{background:var(--black);color:var(--white);padding:56px 0 0;margin-top:auto}
+/* === FOOTER PREMIUM (degradado negro→grafito) === */
+.site-footer{background:#0C0C0C;background-image:linear-gradient(180deg,#141414 0%,#0C0C0C 100%);color:var(--white);padding:56px 0 0;margin-top:auto}
 .footer-grid{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
 .footer-brand{display:flex;align-items:center;gap:10px;color:var(--white);font-weight:800;font-size:1rem;margin-bottom:12px;font-family:var(--font-display)}
 .footer-brand img{height:30px;width:auto}
@@ -222,7 +231,9 @@ details p{padding-top:10px;color:var(--text-muted);font-size:.95rem;line-height:
 html{scroll-behavior:smooth;overflow-x:clip}
 body{overflow-x:clip}
 :focus-visible{outline:3px solid var(--coral);outline-offset:3px}
-.brand img{content:url("../images/brand/syt-mark.svg");width:102px;height:42px;object-fit:contain;object-position:left center}.brand span,.footer-brand span,.jack-footer-brand span{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.footer-brand img,.jack-footer-brand img{content:url("../images/brand/syt-mark.svg");width:clamp(148px,14vw,196px)!important;height:auto!important;max-height:none!important}.jack-footer-brand{display:block;margin-bottom:18px}
+.brand span,.footer-brand span,.jack-footer-brand span{display:inline}
+.footer-brand,.jack-footer-brand{display:inline-flex;align-items:center;gap:10px;color:var(--white);font-weight:900;font-size:1.2rem;font-family:var(--font-display);letter-spacing:.05em;text-transform:uppercase}
+.jack-footer-brand{display:block;margin-bottom:18px}
 .btn,.menu-btn,.carousel-btn,.fab{min-width:44px;min-height:44px}
 .site-header{box-shadow:0 1px 0 rgba(255,255,255,.09);transition:box-shadow .25s,background .25s}
 .site-header .mobile-menu{display:none}
@@ -278,3 +289,22 @@ body{overflow-x:clip}
 }
 @media(max-width:420px){.brand img{width:86px;height:36px}.brand span{display:none}.hero-title{font-size:2.35rem!important}.calc{padding:20px}.val-table{font-size:.78rem}.val-table th,.val-table td{padding:10px 8px}.sol-nudge{font-size:.75rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sol-fab::before,.sol-fab::after,.sol-typing span{animation:none}.photo img,.traje-card img,.carousel-track img{transition:none}}
+
+/* ── RESTAURACION FOOTER 2026-08-12 ─────────────────────────────────────────
+   .jack-footer (anatomia, guia-visual) y el footer sin clase (contacto,
+   valorizacion) perdieron su contenedor oscuro: la marca SYT y el RUT quedaban
+   blanco sobre blanco. Se espeja el look de .site-footer (#0C0C0C). */
+.jack-footer,footer:has(> .wrap.foot-grid),footer:has(> .foot-grid){background:#0C0C0C;background-image:linear-gradient(180deg,#141414 0%,#0C0C0C 100%);color:var(--white);padding:56px 0 0;margin-top:auto}
+.jack-footer-grid,.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;max-width:1160px;margin:0 auto;padding:0 24px 40px}
+.jack-footer-grid h4,.foot-grid h4{margin:0 0 12px;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.jack-footer-grid a,.foot-grid a{display:block;margin-bottom:9px;color:rgba(255,255,255,.72);text-decoration:none;font-size:.9rem}
+.jack-footer-grid a:hover,.foot-grid a:hover{color:var(--white)}
+.jack-footer-grid p,.foot-grid p{color:rgba(255,255,255,.6);font-size:.88rem;line-height:1.55}
+.jack-footer .jack-footer-brand,.foot-grid .brand{color:var(--white)}
+.jack-footer-bottom,.foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1160px;margin:0 auto;padding:18px 24px;border-top:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.45);font-size:.78rem}
+@media(max-width:760px){.jack-footer-grid,.foot-grid{grid-template-columns:1fr 1fr;gap:22px}.jack-footer-bottom,.foot-bottom{flex-direction:column;gap:6px}}
+
+/* .btn-coral: clase usada en anatomia/guia-visual/solicitud (11 usos) que nunca fue
+   definida — los CTA quedaban como texto plano. Alias exacto de .btn-primary. */
+.btn-coral{background:var(--coral);color:var(--white);padding:11px 24px}
+.btn-coral:hover{transform:translateY(-1px)}

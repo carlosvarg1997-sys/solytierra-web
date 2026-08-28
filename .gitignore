@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.py
+*.js.map
+lighthouse-*.json
+qa-*.png
+qa-check.js
+qa-test.js
+qa-screenshots/
+var/
+package-lock.json
+package.json
+tailwind.config.js
+audit.js

@@ -225,6 +225,107 @@
   }
 
   // ─────────────────────────────────────────────────────────────
+  //  Counters · contador animado con easing cúbico
+  //  data-counter="37" data-counter-prefix="" data-counter-suffix="%"
+  // ─────────────────────────────────────────────────────────────
+  function initCounters() {
+    const els = document.querySelectorAll('[data-counter], [data-count]');
+    if (!els.length) return;
+    if (REDUCE || !('IntersectionObserver' in window)) {
+      els.forEach((el) => {
+        const val = parseInt(el.dataset.counter || el.dataset.count || '0', 10);
+        const prefix = el.dataset.counterPrefix || '';
+        const suffix = el.dataset.counterSuffix || '';
+        el.textContent = prefix + val.toLocaleString('es-CL') + suffix;
+      });
+      return;
+    }
+
+    const animate = (el) => {
+      const target = parseInt(el.dataset.counter || el.dataset.count || '0', 10);
+      const prefix = el.dataset.counterPrefix || '';
+      const suffix = el.dataset.counterSuffix || '';
+      const duration = parseInt(el.dataset.counterDuration || '1200', 10);
+      const start = performance.now();
+
+      function tick(now) {
+        const elapsed = now - start;
+        const p = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const current = Math.round(eased * target);
+        el.textContent = prefix + current.toLocaleString('es-CL') + suffix;
+        if (p < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = prefix + target.toLocaleString('es-CL') + suffix;
+        }
+      }
+      requestAnimationFrame(tick);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          animate(e.target);
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.25 });
+
+    els.forEach((el) => io.observe(el));
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  //  Calculator Feedback · pulso sutil cuando cambian los montos
+  // ─────────────────────────────────────────────────────────────
+  function initCalculatorFeedback() {
+    if (REDUCE) return;
+    const moneyNodes = document.querySelectorAll('[data-money]');
+    if (!moneyNodes.length) return;
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((m) => {
+        if (m.type === 'characterData' || m.type === 'childList') {
+          const target = m.target.nodeType === 3 ? m.target.parentElement : m.target;
+          if (target && target.classList) {
+            target.classList.remove('price-val-updated');
+            void target.offsetWidth;
+            target.classList.add('price-val-updated');
+          }
+        }
+      });
+    });
+
+    moneyNodes.forEach((node) => {
+      observer.observe(node, { characterData: true, childList: true, subtree: true });
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────
+  //  Smooth Accordion · apertura y cierre orgánico de <details>
+  // ─────────────────────────────────────────────────────────────
+  function initSmoothAccordion() {
+    if (REDUCE) return;
+    const detailsEls = document.querySelectorAll('details');
+    detailsEls.forEach((el) => {
+      const summary = el.querySelector('summary');
+      if (!summary) return;
+
+      summary.addEventListener('click', () => {
+        const isOpen = el.hasAttribute('open');
+        if (!isOpen) {
+          requestAnimationFrame(() => {
+            const body = el.querySelector('div, p, table, .val-body');
+            if (body) {
+              body.style.animation = 'stepSlideIn 0.24s var(--anim-quick) both';
+            }
+          });
+        }
+      });
+    });
+  }
+
+  // ─────────────────────────────────────────────────────────────
   //  Boot
   // ─────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
@@ -233,6 +334,9 @@
     initAnimatedText();
     initStickyStack();
     initMarquee();
+    initCounters();
+    initCalculatorFeedback();
+    initSmoothAccordion();
   });
 
   // Exponer para uso manual desde otros scripts
@@ -242,6 +346,9 @@
     animatedText: initAnimatedText,
     stickyStack: initStickyStack,
     marquee: initMarquee,
+    counters: initCounters,
+    calculatorFeedback: initCalculatorFeedback,
+    smoothAccordion: initSmoothAccordion,
     SPRING,
   };
 })();

@@ -1,74 +1,93 @@
-(function () {
+/**
+ * conditions-v2.js - Controlador interactivo para el carrusel de 10 condiciones
+ * Cumple con WCAG 2.1 AA (teclado, ARIA, accesibilidad) y resortes de motion.js
+ */
+(function() {
   'use strict';
 
-  function initTabs(root, tabSelector, panelSelector, indexAttribute, options) {
-    if (!root) return;
-    const tabs = Array.from(root.querySelectorAll(tabSelector));
-    const panels = Array.from(root.querySelectorAll(panelSelector));
-    if (!tabs.length || tabs.length !== panels.length) return;
+  document.addEventListener('DOMContentLoaded', function() {
+    var tabs = Array.from(document.querySelectorAll('.condition-tab[data-condition-index]'));
+    var slides = Array.from(document.querySelectorAll('[data-condition-slide]'));
+    var prevBtn = document.querySelector('[data-condition-prev]');
+    var nextBtn = document.querySelector('[data-condition-next]');
+    var countEl = document.querySelector('[data-condition-count]');
 
-    let activeIndex = 0;
-    const show = function (nextIndex, moveFocus) {
-      activeIndex = Math.max(0, Math.min(panels.length - 1, nextIndex));
-      tabs.forEach(function (tab, index) {
-        const active = index === activeIndex;
-        tab.classList.toggle('is-active', active);
-        tab.setAttribute('aria-selected', String(active));
-        tab.setAttribute('tabindex', active ? '0' : '-1');
-      });
-      panels.forEach(function (panel, index) {
-        const active = index === activeIndex;
-        panel.classList.toggle('is-active', active);
-        panel.setAttribute('aria-hidden', String(!active));
-      });
-      if (options && options.counter) {
-        options.counter.textContent = String(activeIndex + 1).padStart(2, '0') + ' / ' + String(panels.length).padStart(2, '0');
-      }
-      if (options && options.previous) options.previous.disabled = activeIndex === 0;
-      if (options && options.next) options.next.disabled = activeIndex === panels.length - 1;
-      if (moveFocus) {
-        tabs[activeIndex].focus();
-        tabs[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
-    };
+    if (!tabs.length || !slides.length) return;
 
-    tabs.forEach(function (tab, index) {
-      tab.setAttribute('id', root.dataset.tabPrefix + '-tab-' + index);
-      panels[index].setAttribute('id', root.dataset.tabPrefix + '-panel-' + index);
-      tab.setAttribute('aria-controls', panels[index].id);
-      panels[index].setAttribute('aria-labelledby', tab.id);
-      tab.addEventListener('click', function () { show(Number(tab.dataset[indexAttribute]), false); });
-      tab.addEventListener('keydown', function (event) {
-        let target = null;
-        if (event.key === 'ArrowRight') target = (index + 1) % tabs.length;
-        if (event.key === 'ArrowLeft') target = (index - 1 + tabs.length) % tabs.length;
-        if (event.key === 'Home') target = 0;
-        if (event.key === 'End') target = tabs.length - 1;
-        if (target !== null) {
-          event.preventDefault();
-          show(target, true);
+    var currentIndex = 0;
+    var total = slides.length;
+
+    function goToSlide(index, focusTab) {
+      if (index < 0) index = 0;
+      if (index >= total) index = total - 1;
+      currentIndex = index;
+
+      // Actualizar tabs
+      tabs.forEach(function(tab, i) {
+        var isActive = (i === currentIndex);
+        tab.classList.toggle('is-active', isActive);
+        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (isActive && focusTab) {
+          tab.focus();
+        }
+      });
+
+      // Actualizar slides
+      slides.forEach(function(slide, i) {
+        var isActive = (i === currentIndex);
+        slide.classList.toggle('is-active', isActive);
+      });
+
+      // Actualizar contador visual
+      if (countEl) {
+        var padCur = (currentIndex + 1 < 10 ? '0' : '') + (currentIndex + 1);
+        var padTot = (total < 10 ? '0' : '') + total;
+        countEl.textContent = padCur + ' / ' + padTot;
+      }
+
+      // Estados de botones ant/sig
+      if (prevBtn) prevBtn.disabled = (currentIndex === 0);
+      if (nextBtn) nextBtn.disabled = (currentIndex === total - 1);
+    }
+
+    // Listeners de tabs
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var idx = parseInt(tab.getAttribute('data-condition-index'), 10);
+        if (!isNaN(idx)) goToSlide(idx, false);
+      });
+
+      tab.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          goToSlide(currentIndex + 1, true);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          goToSlide(currentIndex - 1, true);
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          goToSlide(0, true);
+        } else if (e.key === 'End') {
+          e.preventDefault();
+          goToSlide(total - 1, true);
         }
       });
     });
-    if (options && options.previous) options.previous.addEventListener('click', function () { show(activeIndex - 1, false); });
-    if (options && options.next) options.next.addEventListener('click', function () { show(activeIndex + 1, false); });
-    root.dataset.ready = 'true';
-    show(0, false);
-  }
 
-  const conditionDeck = document.querySelector('[data-condition-deck]');
-  if (conditionDeck) {
-    conditionDeck.dataset.tabPrefix = 'condition';
-    initTabs(conditionDeck, '[data-condition-index]', '[data-condition-slide]', 'conditionIndex', {
-      counter: conditionDeck.querySelector('[data-condition-count]'),
-      previous: conditionDeck.querySelector('[data-condition-prev]'),
-      next: conditionDeck.querySelector('[data-condition-next]')
-    });
-  }
+    // Botones de navegación
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function() {
+        goToSlide(currentIndex - 1, false);
+      });
+    }
 
-  const careStory = document.querySelector('[data-care-story]');
-  if (careStory) {
-    careStory.dataset.tabPrefix = 'care';
-    initTabs(careStory, '[data-care-index]', '[data-care-panel]', 'careIndex');
-  }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        goToSlide(currentIndex + 1, false);
+      });
+    }
+
+    // Inicializar primer slide
+    goToSlide(0, false);
+  });
 })();

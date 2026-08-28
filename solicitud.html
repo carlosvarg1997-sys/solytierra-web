@@ -10,7 +10,7 @@
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://arriendostrajestobas.cl/assets/images/hero.webp">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+<link rel="stylesheet" href="assets/css/styt.css?v=20260812-1">
   <style>
     /* Override base: fondo blanco puro, texto negro (nunca gris) */
     body{background:var(--white);color:var(--text-dark)}
@@ -170,24 +170,45 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio"><img src="assets/images/brand/syt-mark.svg" width="156" height="64" alt="SyT — Sol y Tierra"><span>SyT</span></a>
+    <a class="brand" href="index.html">SYT</a>
     <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="condiciones.html">Condiciones</a>
-      <a href="catalogo.html">Trajes</a>
+      <a  href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html">Catálogo de Trajes</a>
+          <a href="valorizacion.html">Valorización y Precios</a>
+          <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+          <a href="guia-tallaje.html">Guía de Tallas</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="condiciones.html">Reglamento de Arriendo</a>
+          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
+          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        </div>
+      </div>
       <a class="active" href="solicitud.html">Reservar</a>
+      <a  href="contacto.html">Contacto</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary" href="solicitud.html">Reservar</a>
+      <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
       <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
   <div class="wrap mobile-menu">
     <a href="index.html">Inicio</a>
-    <a href="condiciones.html">Condiciones</a>
-    <a href="catalogo.html">Trajes</a>
+    <a href="catalogo.html">Catálogo de Trajes</a>
+    <a href="valorizacion.html">Valorización y Precios</a>
+    <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+    <a href="guia-tallaje.html">Guía de Tallas</a>
+    <a href="condiciones.html">Condiciones y Garantía</a>
+    <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
     <a href="solicitud.html">Reservar</a>
-    <a href="intranet.html">Portal cliente</a>
+    <a href="contacto.html">Contacto</a>
   </div>
 </header>
 
@@ -278,30 +299,30 @@
           <div class="blk-num">02</div>
           <div class="blk-titles">
             <h2>La fecha del baile</h2>
-            <p class="blk-explain">La fecha es lo <strong>más importante</strong> — todo el calendario de arriendos se organiza alrededor del día del baile. Con esta fecha calculamos tu ventana de 6 horas y la devolución.</p>
+            <p class="blk-explain">La fecha es lo <strong>más importante</strong> — todo el calendario de arriendos se organiza alrededor del día del baile. El vestuario se retira la noche previa (18:00 a 22:30) y se devuelve dentro de 3 horas posteriores al baile.</p>
           </div>
         </div>
         <div class="frm-row">
           <div class="fld">
             <label for="b2_fec">Fecha del evento<span class="req">*</span></label>
             <input id="b2_fec" type="date" required>
-            <span class="fld-hint">Día exacto del baile o presentación.</span>
+            <span class="fld-hint">Día exacto del baile o presentación escolar.</span>
           </div>
           <div class="fld">
             <label for="b2_hora">Hora de la presentación<span class="opt">(si ya la sabes)</span></label>
             <input id="b2_hora" type="time" placeholder="Ej: 11:30">
-            <span class="fld-hint">Con esto calculamos tu hora exacta de retiro (3 h antes).</span>
+            <span class="fld-hint">Con esto calculamos la devolución (3 horas post-baile).</span>
           </div>
         </div>
         <div class="frm-row full" style="margin-top:16px">
           <div class="fld">
             <label>¿Cuándo planean retirar?<span class="req">*</span></label>
             <div class="radio-pills" id="b2_mismo" role="radiogroup" aria-label="Momento del retiro">
-              <button class="radio-pill active" type="button" data-val="si"><span class="dot"></span>Mismo día</button>
-              <button class="radio-pill" type="button" data-val="anticipado"><span class="dot"></span>Antes del evento</button>
+              <button class="radio-pill active" type="button" data-val="anticipado"><span class="dot"></span>Noche previa (18:00 - 22:30)</button>
+              <button class="radio-pill" type="button" data-val="si"><span class="dot"></span>Mismo día temprano</button>
               <button class="radio-pill" type="button" data-val="otro"><span class="dot"></span>Por coordinar</button>
             </div>
-            <span class="fld-hint">La hora definitiva se confirma según ruta, disponibilidad y ventana de uso.</span>
+            <span class="fld-hint">Recomendamos retirar la noche previa para evitar estrés en la mañana del evento.</span>
           </div>
         </div>
 
@@ -317,40 +338,53 @@
           <div class="blk-num">03</div>
           <div class="blk-titles">
             <h2>Cantidad y colores</h2>
-            <p class="blk-explain">La cantidad define cuántos trajes necesitas y <strong>se cruza con nuestro stock disponible para tu fecha</strong>. El color PREFERIDO es el que trataremos de asignarte — depende de la disponibilidad para ese día. Por eso pedimos un color alternativo como respaldo.</p>
+            <p class="blk-explain">La cantidad define cuántos trajes necesitas y <strong>se cruza con nuestro stock disponible para tu fecha</strong>. El color PREFERIDO es el que trataremos de asignarte. También puedes indicar un color alternativo de respaldo.</p>
           </div>
         </div>
         <div class="frm-row">
           <div class="fld">
             <label for="b3_h">Cantidad de hombres<span class="req">*</span></label>
-            <input id="b3_h" type="number" min="0" value="0" oninput="updateCalc()" required>
+            <div class="qty-control">
+              <button type="button" class="qty-btn minus" onclick="stepQty('b3_h', -1)" aria-label="Restar un hombre">−</button>
+              <input id="b3_h" type="number" min="0" value="0" oninput="updateCalc()" required>
+              <button type="button" class="qty-btn plus" onclick="stepQty('b3_h', 1)" aria-label="Sumar un hombre">+</button>
+            </div>
             <span class="fld-hint">Incluye a todos los alumnos que bailarán.</span>
           </div>
           <div class="fld">
             <label for="b3_m">Cantidad de mujeres<span class="req">*</span></label>
-            <input id="b3_m" type="number" min="0" value="0" oninput="updateCalc()" required>
-            <span class="fld-hint">Mismo corte que hombres, distintos accesorios.</span>
+            <div class="qty-control">
+              <button type="button" class="qty-btn minus" onclick="stepQty('b3_m', -1)" aria-label="Restar una mujer">−</button>
+              <input id="b3_m" type="number" min="0" value="0" oninput="updateCalc()" required>
+              <button type="button" class="qty-btn plus" onclick="stepQty('b3_m', 1)" aria-label="Sumar una mujer">+</button>
+            </div>
+            <span class="fld-hint">Peto y falda independientes según tallaje.</span>
           </div>
         </div>
 
         <div class="frm-row full" style="margin-top:18px">
           <div class="fld">
             <label>Color preferido<span class="req">*</span></label>
-            <div class="color-chips" id="b3_color" role="radiogroup" aria-label="Color preferido">
+            <div class="color-chips" id="b3_color" role="radiogroup" aria-label="Color preferido" style="grid-template-columns:repeat(4,1fr)">
               <div class="color-chip active" data-val="Rojo">
                 <div class="swatch sw-red"></div>
                 <div class="name">Rojo</div>
-                <div class="stock">Stock habitual</div>
+                <div class="stock">Más solicitado</div>
               </div>
               <div class="color-chip" data-val="Azul">
                 <div class="swatch sw-blue"></div>
                 <div class="name">Azul</div>
-                <div class="stock">Stock habitual</div>
+                <div class="stock">Tradición clásica</div>
               </div>
               <div class="color-chip" data-val="Fucsia">
                 <div class="swatch sw-pink"></div>
                 <div class="name">Fucsia</div>
-                <div class="stock">Stock limitado</div>
+                <div class="stock">Vibrante</div>
+              </div>
+              <div class="color-chip" data-val="Morado">
+                <div class="swatch" style="background:#7C3AED"></div>
+                <div class="name">Morado</div>
+                <div class="stock">Ceremonial</div>
               </div>
             </div>
           </div>
@@ -359,11 +393,11 @@
         <div class="frm-row full" style="margin-top:14px">
           <div class="fld">
             <label>Color alternativo<span class="opt">(opcional pero recomendado)</span></label>
-            <div class="color-chips" id="b3_color_alt" role="radiogroup" aria-label="Color alternativo">
+            <div class="color-chips" id="b3_color_alt" role="radiogroup" aria-label="Color alternativo" style="grid-template-columns:repeat(5,1fr)">
               <div class="color-chip active" data-val="Sin altern.">
                 <div class="swatch" style="background:var(--border-light)"></div>
-                <div class="name" style="font-size:.8rem">Sin alternativo</div>
-                <div class="stock">Asignamos el preferido</div>
+                <div class="name" style="font-size:.8rem">Sin altern.</div>
+                <div class="stock">Solo preferido</div>
               </div>
               <div class="color-chip" data-val="Rojo">
                 <div class="swatch sw-red"></div>
@@ -376,6 +410,10 @@
               <div class="color-chip" data-val="Fucsia">
                 <div class="swatch sw-pink"></div>
                 <div class="name">Fucsia</div>
+              </div>
+              <div class="color-chip" data-val="Morado">
+                <div class="swatch" style="background:#7C3AED"></div>
+                <div class="name">Morado</div>
               </div>
             </div>
             <span class="fld-hint">Si el preferido no está disponible para tu fecha, asignamos este sin consultarte.</span>
@@ -496,7 +534,7 @@
           </div>
 
           <div class="consent-box">
-            <label><input id="acepta_condiciones" type="checkbox" required> <span>Leí y acepto las <a href="condiciones.html" target="_blank" rel="noopener">condiciones del arriendo</a>, incluida la garantía, la ventana de 6 horas y las reglas de cuidado.</span></label>
+            <label><input id="acepta_condiciones" type="checkbox" required> <span>Leí y acepto las <a href="condiciones.html" target="_blank" rel="noopener">condiciones del arriendo</a>, incluida la garantía, el retiro la noche previa (18:00 a 22:30), devolución 3h post-baile y las reglas de cuidado.</span></label>
             <label><input id="acepta_privacidad" type="checkbox" required> <span>Autorizo el uso de estos datos para cotizar, coordinar el arriendo, preparar documentos y gestionar la intranet, según la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.</span></label>
             <p>No usamos estos datos para vender bases ni publicidad de terceros. Puedes solicitar acceso, corrección o eliminación.</p>
           </div>
@@ -549,7 +587,7 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></div>
+      <div class="footer-brand">SYT<span></span></div>
       <p>Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p>
     </div>
     <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a></div>
@@ -608,6 +646,11 @@
       var active = index === n - 1;
       block.classList.toggle('is-active', active);
       block.setAttribute('aria-hidden', String(!active));
+      if(active && shouldScroll){
+        block.classList.remove('step-entering');
+        void block.offsetWidth;
+        block.classList.add('step-entering');
+      }
     });
     document.querySelectorAll('.stepper-pill').forEach(function(p){
       var s = +p.getAttribute('data-step');
@@ -762,11 +805,33 @@
     var gar = n * GARANTIA;
     var res = Math.floor(arr/2) + gar;
     var saldo = arr - Math.floor(arr/2);
-    $('r_total').querySelector('.v').textContent = n + (n===1?' traje':(n?' trajes':''));
-    $('r_arr').querySelector('.v').textContent = money(arr);
-    $('r_gar').querySelector('.v').textContent = money(gar);
-    $('r_res').querySelector('.v').textContent = money(res);
-    $('r_saldo').querySelector('.v').textContent = money(saldo);
+
+    function setSide(id, val){
+      var row = $(id);
+      if(!row) return;
+      var vNode = row.querySelector('.v');
+      if(vNode && vNode.textContent !== val){
+        vNode.textContent = val;
+        vNode.classList.remove('price-val-updated');
+        void vNode.offsetWidth;
+        vNode.classList.add('price-val-updated');
+      }
+    }
+    setSide('r_total', n + (n===1?' traje':(n?' trajes':'0')));
+    setSide('r_arr', money(arr));
+    setSide('r_gar', money(gar));
+    setSide('r_res', money(res));
+    setSide('r_saldo', money(saldo));
+  };
+
+  window.stepQty = function(id, delta){
+    var el = $(id);
+    if(!el) return;
+    var current = parseInt(el.value || '0', 10) || 0;
+    var next = Math.max(0, current + delta);
+    el.value = next;
+    state[id] = next;
+    updateCalc();
   };
 
   // ── Code generator (visual only)
@@ -787,7 +852,14 @@
     }
     function setMoney(k, v){
       var nodes = document.querySelectorAll('[data-money="'+k+'"]');
-      nodes.forEach(function(n){ n.textContent = v; });
+      nodes.forEach(function(n){
+        if(n.textContent !== v){
+          n.textContent = v;
+          n.classList.remove('price-val-updated');
+          void n.offsetWidth;
+          n.classList.add('price-val-updated');
+        }
+      });
     }
     setBind('b1_col', escape(state.b1_col) || '—');
     setBind('b1_cur', escape(state.b1_cur) || '—');
@@ -795,7 +867,7 @@
     setBind('b1_tel', escape(state.b1_tel) || '—');
     setBind('b2_fec', fmtFecha(state.b2_fec));
     setBind('b2_hora', escape(state.b2_hora) || 'Por definir');
-    var mismoTxt = state.b2_mismo === 'si' ? 'Mismo día' : (state.b2_mismo === 'anticipado' ? 'Retiro anticipado' : 'A convenir');
+    var mismoTxt = state.b2_mismo === 'si' ? 'Mismo día temprano' : (state.b2_mismo === 'anticipado' ? 'Noche previa (18:00 a 22:30)' : 'Por coordinar');
     setBind('b2_mismo', mismoTxt);
     setBind('b3_h', h);
     setBind('b3_m', m);
@@ -825,7 +897,7 @@
     var n = h + m;
     var arr = n * ARRIENDO, gar = n * GARANTIA, res = Math.floor(arr/2)+gar, saldo = arr - Math.floor(arr/2);
     var opTxt = state.b4_opcion === 'tengo' ? 'Ya tengo la ficha lista' : (state.b4_opcion === 'plantilla' ? 'Usaré la planilla imprimible' : 'Usaré la ficha online');
-    var mismoTxt = state.b2_mismo === 'si' ? 'Mismo día' : (state.b2_mismo === 'anticipado' ? 'Retiro anticipado' : 'A convenir');
+    var mismoTxt = state.b2_mismo === 'si' ? 'Mismo día temprano' : (state.b2_mismo === 'anticipado' ? 'Noche previa (18:00 a 22:30)' : 'Por coordinar');
     return 'Hola Sol y Tierra, quiero generar el Compromiso de Arriendo.\n\n' +
       '1 · COLEGIO\n' +
       'Colegio: ' + (state.b1_col||'—') + '\n' +
@@ -926,7 +998,7 @@
     var h = +state.b3_h || 0, m = +state.b3_m || 0;
     var n = h + m;
     var arr = n * ARRIENDO, gar = n * GARANTIA, res = Math.floor(arr/2)+gar, saldo = arr - Math.floor(arr/2);
-    var mismoTxt = state.b2_mismo === 'si' ? 'Mismo día' : (state.b2_mismo === 'anticipado' ? 'Retiro anticipado' : 'A convenir');
+    var mismoTxt = state.b2_mismo === 'si' ? 'Mismo día temprano' : (state.b2_mismo === 'anticipado' ? 'Noche previa (18:00 a 22:30)' : 'Por coordinar');
     var opTxt = state.b4_opcion === 'tengo' ? 'Ya tengo la ficha lista' : (state.b4_opcion === 'plantilla' ? 'Necesito la plantilla de tallaje' : 'Usaré la ficha online');
     var cod = genCode();
 
@@ -977,7 +1049,8 @@
       '<div class="sign"><div>Firma Sol y Tierra</div><div>Firma del colegio · ' + escape(state.b1_nom) + '</div></div>' +
       '<p class="cond"><strong>Este resumen no reemplaza el Compromiso de Arriendo oficial.</strong> El documento contractual estará disponible en la intranet después de confirmar disponibilidad. La garantía de $10.000 por traje se devuelve al recibir el vestuario completo, sin daños y a tiempo.</p>' +
       '<script>window.onload=function(){setTimeout(function(){window.print();},300)}<\/script>' +
-      '</body></html>';
+      '<script>document.querySelectorAll('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.mobile-menu').classList.toggle('open')}));</script>
+</body></html>';
 
     var blob = new Blob([html], {type:'text/html;charset=utf-8'});
     var url = URL.createObjectURL(blob);
@@ -1018,5 +1091,6 @@
 <script src="assets/js/sol.js?v=20260805-5" defer></script>
 <script src="assets/js/comunes.js" defer></script>
 
+<script>document.querySelectorAll('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.mobile-menu').classList.toggle('open')}));</script>
 </body>
 </html>

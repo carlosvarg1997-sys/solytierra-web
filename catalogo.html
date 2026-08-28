@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://arriendostrajestobas.cl/assets/images/hero.webp">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+<link rel="stylesheet" href="assets/css/styt.css?v=20260812-1">
 <link rel="stylesheet" href="assets/css/site-clarity-v2.css?v=20260807-1">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Trajes de Tobas Sol y Tierra","url":"https://arriendostrajestobas.cl/catalogo.html","itemListElement":[{"@type":"ListItem","position":1,"name":"Traje rojo"},{"@type":"ListItem","position":2,"name":"Traje azul"},{"@type":"ListItem","position":3,"name":"Traje fucsia"}]}</script>
 </head>
@@ -18,44 +18,80 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio"><img src="assets/images/brand/syt-mark.svg" width="156" height="64" alt="SyT — Sol y Tierra"><span>SyT</span></a>
+    <a class="brand" href="index.html">SYT</a>
     <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="condiciones.html">Condiciones</a>
-      <a class="active" href="catalogo.html">Trajes</a>
-      <a href="solicitud.html">Reservar</a>
+      <a  href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html">Catálogo de Trajes</a>
+          <a href="valorizacion.html">Valorización y Precios</a>
+          <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+          <a href="guia-tallaje.html">Guía de Tallas</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="condiciones.html">Reglamento de Arriendo</a>
+          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
+          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        </div>
+      </div>
+      <a  href="solicitud.html">Reservar</a>
+      <a  href="contacto.html">Contacto</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary" href="solicitud.html">Reservar</a>
+      <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
       <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
   <div class="wrap mobile-menu">
     <a href="index.html">Inicio</a>
-    <a href="condiciones.html">Condiciones</a>
-    <a href="catalogo.html">Trajes</a>
+    <a href="catalogo.html">Catálogo de Trajes</a>
+    <a href="valorizacion.html">Valorización y Precios</a>
+    <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+    <a href="guia-tallaje.html">Guía de Tallas</a>
+    <a href="condiciones.html">Condiciones y Garantía</a>
+    <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
     <a href="solicitud.html">Reservar</a>
-    <a href="intranet.html">Portal cliente</a>
+    <a href="contacto.html">Contacto</a>
   </div>
 </header>
 
 <main>
 
 <!-- HERO TRAJES -->
-<section class="section section-light" style="padding:96px 0 32px">
-  <div class="wrap" style="text-align:center;max-width:720px;margin:0 auto">
+<section class="section section-light" style="padding:96px 0 24px">
+  <div class="wrap" style="text-align:center;max-width:760px;margin:0 auto">
     <span class="tag" style="margin-bottom:14px;display:inline-block;color:var(--coral)">Trajes · Temporada 2026</span>
-    <h1 style="color:var(--text-dark);margin-bottom:16px">Tres colores, una calidad</h1>
-    <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:0">Traje completo $35.000 + $10.000 garantía reembolsable. Cada color disponible para hombres y mujeres.</p>
+    <h1 style="color:var(--text-dark);margin-bottom:16px">Cuatro colores oficiales, una calidad impecable</h1>
+    <p style="font-size:1.15rem;color:var(--text-muted);margin-bottom:0">Traje completo $35.000 + $10.000 garantía reembolsable. Cada color disponible para hombres y mujeres con tallaje desacoplado.</p>
+    
+    <nav class="traje-filter-bar" style="display:flex;gap:10px;justify-content:center;margin:28px auto 0;flex-wrap:wrap" aria-label="Saltar al color">
+      <a href="#traje-rojo" class="filter-pill" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border-light);border-radius:999px;background:#fff;text-decoration:none;font-weight:700;color:var(--text-dark);font-size:.88rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .2s var(--anim-spring)">
+        <span style="width:10px;height:10px;border-radius:50%;background:#dc2626"></span> Rojo Clásico
+      </a>
+      <a href="#traje-azul" class="filter-pill" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border-light);border-radius:999px;background:#fff;text-decoration:none;font-weight:700;color:var(--text-dark);font-size:.88rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .2s var(--anim-spring)">
+        <span style="width:10px;height:10px;border-radius:50%;background:#2563eb"></span> Azul Tradición
+      </a>
+      <a href="#traje-fucsia" class="filter-pill" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border-light);border-radius:999px;background:#fff;text-decoration:none;font-weight:700;color:var(--text-dark);font-size:.88rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .2s var(--anim-spring)">
+        <span style="width:10px;height:10px;border-radius:50%;background:#db2777"></span> Fucsia Brillante
+      </a>
+      <a href="#traje-morado" class="filter-pill" style="display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--border-light);border-radius:999px;background:#fff;text-decoration:none;font-weight:700;color:var(--text-dark);font-size:.88rem;box-shadow:0 2px 8px rgba(0,0,0,.04);transition:transform .2s var(--anim-spring)">
+        <span style="width:10px;height:10px;border-radius:50%;background:#7c3aed"></span> Morado Ceremonial
+      </a>
+    </nav>
   </div>
 </section>
 
 <!-- STICKY STACK TRAJES -->
-<section class="section section-light" style="padding:32px 0 96px">
+<section class="section section-light" style="padding:24px 0 96px">
   <div class="wrap">
 
     <!-- ROJO -->
-    <article class="traje-stack-item">
+    <article class="traje-stack-item" id="traje-rojo">
       <div class="ts-top">
         <span class="ts-num">01</span>
         <div>
@@ -83,7 +119,7 @@
     </article>
 
     <!-- AZUL -->
-    <article class="traje-stack-item">
+    <article class="traje-stack-item" id="traje-azul">
       <div class="ts-top">
         <span class="ts-num">02</span>
         <div>
@@ -111,7 +147,7 @@
     </article>
 
     <!-- FUCSIA -->
-    <article class="traje-stack-item">
+    <article class="traje-stack-item" id="traje-fucsia">
       <div class="ts-top">
         <span class="ts-num">03</span>
         <div>
@@ -136,6 +172,34 @@
         <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
       </div>
       <div style="padding:0 36px 32px"><a class="btn btn-primary btn-block" href="solicitud.html?color=Fucsia">Elegir fucsia y cotizar</a></div>
+    </article>
+
+    <!-- MORADO -->
+    <article class="traje-stack-item" id="traje-morado">
+      <div class="ts-top">
+        <span class="ts-num">04</span>
+        <div>
+          <p class="ts-cat">Traje · Morado</p>
+          <h3>Traje color Morado</h3>
+          <p class="ts-desc">Tonalidad ceremonial andina profunda y elegante. Gran impacto visual bajo luces de escenario.</p>
+        </div>
+        <span class="ts-price">$35.000</span>
+      </div>
+      <div class="carousel" data-carousel>
+        <button class="carousel-btn prev" data-prev aria-label="Anterior">‹</button>
+        <div class="carousel-track">
+          <img src="assets/images/oficiales/morado-mujer.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas morado para mujer">
+          <img src="assets/images/oficiales/morado-hombre.webp" width="800" height="1067" loading="lazy" alt="Traje de Tobas morado para hombre">
+        </div>
+        <button class="carousel-btn next" data-next aria-label="Siguiente">›</button>
+        <div class="carousel-dots" data-dots></div>
+      </div>
+      <div class="ts-info-grid">
+        <div class="ts-info-card"><div class="label">Arriendo</div><div class="value price-val">$35.000</div></div>
+        <div class="ts-info-card"><div class="label">Garantía</div><div class="value">$10.000</div></div>
+        <div class="ts-info-card"><div class="label">Reservar (50%)</div><div class="value">$27.500</div></div>
+      </div>
+      <div style="padding:0 36px 32px"><a class="btn btn-primary btn-block" href="solicitud.html?color=Morado">Elegir morado y cotizar</a></div>
     </article>
 
   </div>
@@ -209,29 +273,120 @@
   </div>
 </section>
 
-<!-- PIEZAS REALES DEL TRAJE -->
+<!-- PIEZAS OFICIALES Y VALORES DE REPOSICION -->
 <section class="section section-light parts-section" aria-labelledby="parts-title">
   <div class="wrap">
     <div class="parts-intro">
       <span class="tag">Conoce el traje</span>
-      <h2 id="parts-title">Piezas reales que recibirás</h2>
-      <p>Estas fotografías muestran la estructura, volumen y terminaciones de los accesorios. Los colores cambian según el conjunto elegido.</p>
+      <h2 id="parts-title">Piezas oficiales y valor de reposición</h2>
+      <p>Cada traje incluye 8 piezas confeccionadas para alta resistencia en escenario. Para evitar sorpresas, este es el costo de reposición por pieza en caso de extravío o daño irreparable:</p>
     </div>
-    <div class="parts-grid">
-      <article class="part-card" data-fade>
-        <figure class="part-media"><img src="assets/images/references/penacho.webp" width="1100" height="825" loading="lazy" alt="Penacho Tobas ancho con base azul y plateada, plumas blancas, fucsias y azules"></figure>
-        <div class="part-copy"><span>01 · Cabeza</span><h3>Penacho</h3><p>Es una pieza ancha y de gran volumen. Se transporta vertical, en una sola fila y sin peso sobre las plumas.</p></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:28px">
+      
+      <article class="piece-card" data-fade>
+        <div class="piece-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Fotografía Oficial · Penacho</span>
+          <span class="piece-value-badge">Reposición: $286.000</span>
+        </div>
+        <div class="piece-card-head">
+          <div>
+            <span class="piece-card-cat">01 · Cabeza</span>
+            <h4>Penacho de Plumas</h4>
+          </div>
+        </div>
+        <p class="piece-card-desc">Tocado artesanal con plumas naturales de avestruz. Se transporta erguido en el asiento trasero.</p>
+        <div class="piece-card-val"><span>Costo de reposición:</span><strong>$286.000</strong></div>
       </article>
-      <article class="part-card" data-fade>
-        <figure class="part-media"><img src="assets/images/references/puneras.webp" width="1100" height="1375" loading="lazy" alt="Puñera Tobas roja, blanca y plateada con plumas largas blancas"></figure>
-        <div class="part-copy"><span>02 · Brazos</span><h3>Puñeras</h3><p>Sus plumas largas se enredan con facilidad. Deben ir extendidas, separadas de cierres y piezas rígidas.</p></div>
+
+      <article class="piece-card" data-fade>
+        <div class="piece-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Fotografía Oficial · Torso</span>
+          <span class="piece-value-badge">Reposición: $50.000</span>
+        </div>
+        <div class="piece-card-head">
+          <div>
+            <span class="piece-card-cat">02 · Torso</span>
+            <h4>Peto (Mujer) / Chaqueta (Hombre)</h4>
+          </div>
+        </div>
+        <p class="piece-card-desc">Bordado andino de alta densidad con ojalillos traseros para entrelazado de cordón.</p>
+        <div class="piece-card-val"><span>Costo de reposición:</span><strong>$50.000</strong></div>
       </article>
-      <article class="part-card" data-fade>
-        <figure class="part-media"><img src="assets/images/references/polainas.webp" width="1100" height="1375" loading="lazy" alt="Par de polainas Tobas rojas, blancas y plateadas con aplicaciones decorativas"></figure>
-        <div class="part-copy"><span>03 · Piernas</span><h3>Polainas</h3><p>Se guardan por par y sin aplastar sus terminaciones. Al devolver, revisa que ambas piezas estén presentes.</p></div>
+
+      <article class="piece-card" data-fade>
+        <div class="piece-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Fotografía Oficial · Inferior</span>
+          <span class="piece-value-badge">Reposición: $50.000</span>
+        </div>
+        <div class="piece-card-head">
+          <div>
+            <span class="piece-card-cat">03 · Inferior</span>
+            <h4>Falda (Mujer) / Faldón (Hombre)</h4>
+          </div>
+        </div>
+        <p class="piece-card-desc">Falda tradicional con flecos o faldón seccionado en paneles para comodidad en el baile.</p>
+        <div class="piece-card-val"><span>Costo de reposición:</span><strong>$50.000</strong></div>
       </article>
+
+      <article class="piece-card" data-fade>
+        <div class="piece-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Fotografía Oficial · Brazos</span>
+          <span class="piece-value-badge">Reposición: $36.000</span>
+        </div>
+        <div class="piece-card-head">
+          <div>
+            <span class="piece-card-cat">04 · Brazos (Par)</span>
+            <h4>Par de Puñeras</h4>
+          </div>
+        </div>
+        <p class="piece-card-desc">Brazaletes con aplicaciones andinas y plumas decoradas. Se entregan y cobran por par.</p>
+        <div class="piece-card-val"><span>Costo de reposición (par):</span><strong>$36.000</strong></div>
+      </article>
+
+      <article class="piece-card" data-fade>
+        <div class="piece-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Fotografía Oficial · Piernas</span>
+          <span class="piece-value-badge">Reposición: $57.000</span>
+        </div>
+        <div class="piece-card-head">
+          <div>
+            <span class="piece-card-cat">05 · Piernas (Par)</span>
+            <h4>Par de Polainas</h4>
+          </div>
+        </div>
+        <p class="piece-card-desc">Ajustables con cordón tripolino en la pantorrilla. Protegen y resaltan los saltos.</p>
+        <div class="piece-card-val"><span>Costo de reposición (par):</span><strong>$57.000</strong></div>
+      </article>
+
+      <article class="piece-card" data-fade>
+        <div class="piece-placeholder">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Fotografía Oficial · Accesorio</span>
+          <span class="piece-value-badge">Reposición: $36.000</span>
+        </div>
+        <div class="piece-card-head">
+          <div>
+            <span class="piece-card-cat">06 · Accesorio</span>
+            <h4>Arco Ceremonial Tobas</h4>
+          </div>
+        </div>
+        <p class="piece-card-desc">Arco de madera decorado a mano con cuerdas y cintas festivas a juego con el traje.</p>
+        <div class="piece-card-val"><span>Costo de reposición:</span><strong>$36.000</strong></div>
+      </article>
+
     </div>
-    <p class="parts-hint">Toca cualquier fotografía para verla en detalle.</p>
+    <div style="margin-top:24px;padding:18px;background:#fef2f2;border:1px solid #fecaca;border-radius:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div>
+        <strong style="color:#b91c1c;display:block">Valor Total Traje Completo: $529.000</strong>
+        <span style="font-size:.88rem;color:#7f1d1d">La garantía de $10.000 es simbólica y reembolsable. Cuidar cada accesorio asegura que el siguiente colegio pueda bailar.</span>
+      </div>
+      <a class="btn btn-primary" href="valorizacion.html" style="font-size:.85rem;padding:9px 18px">Ver tabla completa de daños</a>
+    </div>
   </div>
 </section>
 
@@ -245,35 +400,36 @@
     </header>
     <div class="personal-board">
       <section class="personal-choice" data-fade aria-labelledby="pin-title">
-        <div class="personal-choice-head"><span class="personal-number">01</span><div><p class="personal-kicker">Elige una alternativa</p><h3 id="pin-title">Alfiler metálico de 5 cm</h3></div></div>
+        <div class="personal-choice-head"><span class="personal-number">01</span><div><p class="personal-kicker">Elige una sola opción (1 por alumno)</p><h3 id="pin-title">Alfiler de gancho de 5 cm</h3></div></div>
         <div class="pin-options">
           <article class="pin-option pin-option-featured">
-            <figure><img src="assets/images/guides/alfiler-reforzado.webp" width="1200" height="1200" loading="lazy" alt="Alfiler reforzado metálico, mostrado cerrado y abierto"></figure>
-            <div><span class="pin-badge">Recomendado · mejor calidad</span><h4>Alfiler reforzado</h4><p>Es más duro y resistente. Sujeta con mayor firmeza, aunque puede ser más difícil de encontrar.</p></div>
+            <figure><img src="assets/images/guides/alfiler_reforzado_5cm.jpg" width="1200" height="900" loading="lazy" alt="Alfiler reforzado metálico de 5 cm, grueso y resistente"></figure>
+            <div><span class="pin-badge">Recomendado · mejor calidad</span><h4>Alfiler reforzado (5 cm)</h4><p>Alfiler de acero más grueso y duro. Sujeta con máxima firmeza y no se abre con los saltos del baile.</p></div>
           </article>
           <article class="pin-option">
-            <figure><img src="assets/images/guides/kit-personal.webp" width="1280" height="960" loading="lazy" alt="Alfiler estándar metálico junto a un rollo de tripolino azul"></figure>
-            <div><span class="pin-badge">Alternativa válida</span><h4>Alfiler estándar</h4><p>Es más fácil de conseguir y también sirve para el sistema de ajuste indicado.</p></div>
+            <figure><img src="assets/images/guides/alfiler_estandar_5cm.jpg" width="1200" height="900" loading="lazy" alt="Alfiler estándar metálico de 5 cm de mercería"></figure>
+            <div><span class="pin-badge">Alternativa válida</span><h4>Alfiler estándar (5 cm)</h4><p>Alfiler de gancho clásico de mercería. Fácil de conseguir y cumple con el sistema de sujeción.</p></div>
           </article>
         </div>
-        <p class="pin-note"><strong>No necesitas ambos:</strong> lleva un alfiler reforzado o uno estándar por alumno. No coses, cortes ni pegues el traje.</p>
+        <p class="pin-note"><strong>No necesitas ambos:</strong> elige uno reforzado o uno estándar. Está estrictamente prohibido usar alfileres de costura pequeños, cortar, coser o pegar con silicona.</p>
       </section>
 
       <section class="personal-cord" data-fade aria-labelledby="cord-title">
-        <div class="personal-choice-head"><span class="personal-number">02</span><div><p class="personal-kicker">Ajuste personal</p><h3 id="cord-title">Tripolino macramé</h3></div></div>
-        <div class="personal-specs"><strong>2 mm de grosor</strong><strong>8 a 10 m por alumno</strong><strong>Depende de la talla</strong><strong>Color a elección</strong></div>
-        <p class="cord-lead">El cordón se entrelaza para adaptar el traje al cuerpo. Que quede un espacio abierto <strong>no significa que la talla esté mal</strong>.</p>
+        <div class="personal-choice-head"><span class="personal-number">02</span><div><p class="personal-kicker">Obligatorio por alumno</p><h3 id="cord-title">Cordón tripolino macramé (2 mm)</h3></div></div>
+        <figure style="margin:16px 0 18px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.1)"><img src="assets/images/guides/cordon_tripolino_2mm.jpg" width="1200" height="800" loading="lazy" alt="Bobina de cordón tripolino macramé de 2 mm para ajuste de peto y polainas" style="width:100%;height:auto;max-height:220px;object-fit:cover"></figure>
+        <div class="personal-specs"><strong>2 mm de grosor</strong><strong>8 a 10 m por alumno</strong><strong>Cordonería</strong><strong>Color a elección</strong></div>
+        <p class="cord-lead">El cordón se entrelaza por los ojalillos para ajustar el traje al cuerpo del estudiante. Que quede un espacio abierto en la espalda <strong>no significa que la talla esté chica</strong>.</p>
         <div class="cord-fit-grid">
-          <article><span>Peto de mujer</span><h4>Prioriza el ajuste de busto</h4><p>Se abrocha atrás entrelazando el cordón. Si queda espacio en la espalda, es normal: el tripolino lo afirma y el penacho cubre esa zona.</p></article>
-          <article><span>Polainas</span><h4>El cordón completa el cierre</h4><p>Si no cierran por completo alrededor de la pierna, el mismo tripolino las afirma. No fuerces ni modifiques la pieza.</p></article>
+          <article><span>Peto de mujer</span><h4>Ajuste de espalda</h4><p>Se abrocha atrás entrelazando en zigzag. La abertura trasera es el calce normal: el tripolino lo sostiene y el penacho cubre la espalda.</p></article>
+          <article><span>Polainas</span><h4>Cierre de pantorrilla</h4><p>Si la polaina no cierra por completo alrededor de la pierna, el mismo tripolino la afirma. No fuerces la prenda.</p></article>
         </div>
       </section>
     </div>
     <aside class="personal-warning" data-fade>
       <span class="personal-alert" aria-hidden="true">!</span>
-      <div><span>Importante antes de devolver</span><strong>El traje debe regresar sin el tripolino.</strong><p>Retíralo por completo y no realices reparaciones o modificaciones por cuenta propia.</p></div>
+      <div><span>Importante antes de devolver</span><strong>El traje debe regresar sin el tripolino.</strong><p>Retira el cordón por completo antes de la entrega. Sol y Tierra realiza el lavado e higienización profesional en taller.</p></div>
     </aside>
-    <div class="personal-buy" data-fade><span>¿Dónde comprar?</span><p>Busca ambos elementos en tiendas de cordonería o mercería de:</p><ul><li>Rosas</li><li>Independencia</li><li>Patronato</li><li>Meiggs</li></ul></div>
+    <div class="personal-buy" data-fade><span>¿Dónde comprar en Santiago?</span><p>Encuentra ambos insumos en cualquier cordonería o mercería tradicional de:</p><ul><li>Calle Rosas (Centro)</li><li>Av. Independencia</li><li>Barrio Patronato</li><li>Barrio Meiggs</li></ul></div>
   </div>
 </section>
 
@@ -282,7 +438,7 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></div>
+      <div class="footer-brand">SYT<span></span></div>
       <p>Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p>
     </div>
     <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="condiciones.html#faq">Preguntas frecuentes</a></div>
@@ -297,7 +453,25 @@
 <script>
 // Calculadora
 function ajustar(d){var i=document.getElementById('qty');i.value=Math.max(1,Math.min(80,parseInt(i.value||1)+d));calcular()}
-function calcular(){var n=parseInt(document.getElementById('qty').value)||1;var arr=n*35000;var gar=n*10000;var res=Math.round(arr*0.5)+gar;document.getElementById('arr').textContent='$'+arr.toLocaleString('es-CL');document.getElementById('gar').textContent='$'+gar.toLocaleString('es-CL');document.getElementById('res').textContent='$'+res.toLocaleString('es-CL');document.getElementById('calcLink').href='solicitud.html?n='+n}
+function calcular(){
+  var n=parseInt(document.getElementById('qty').value)||1;
+  var arr=n*35000;
+  var gar=n*10000;
+  var res=Math.round(arr*0.5)+gar;
+  function updateNode(id, text){
+    var el = document.getElementById(id);
+    if(el && el.textContent !== text){
+      el.textContent = text;
+      el.classList.remove('price-val-updated');
+      void el.offsetWidth;
+      el.classList.add('price-val-updated');
+    }
+  }
+  updateNode('arr', '$'+arr.toLocaleString('es-CL'));
+  updateNode('gar', '$'+gar.toLocaleString('es-CL'));
+  updateNode('res', '$'+res.toLocaleString('es-CL'));
+  document.getElementById('calcLink').href='solicitud.html?n='+n;
+}
 
 // Carrusel
 document.querySelectorAll('[data-carousel]').forEach(c => {
@@ -340,6 +514,8 @@ window.addEventListener('scroll', () => {
 });
 </script>
 <script src="assets/js/premium.js?v=20260805-3" defer></script>
+<script src="assets/js/motion.js?v=20260828-1" defer></script>
 <script src="assets/js/sol.js?v=20260805-5" defer></script>
+<script>document.querySelectorAll('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.mobile-menu').classList.toggle('open')}));</script>
 </body>
 </html>

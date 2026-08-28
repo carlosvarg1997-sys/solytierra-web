@@ -10,7 +10,7 @@
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://arriendostrajestobas.cl/assets/images/guides/penachos-asiento.webp">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/fonts.css">
-<link rel="stylesheet" href="assets/css/styt.css?v=20260807-1">
+<link rel="stylesheet" href="assets/css/styt.css?v=20260812-1">
 <link rel="stylesheet" href="assets/css/site-clarity-v2.css?v=20260805-2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cuesta arrendar un traje?","acceptedAnswer":{"@type":"Answer","text":"El arriendo cuesta $35.000 por traje y la garantía reembolsable es de $10.000 por traje."}},{"@type":"Question","name":"¿Cómo se reserva?","acceptedAnswer":{"@type":"Answer","text":"La reserva requiere el 50% del arriendo más la garantía completa. El saldo se paga hasta 24 horas antes del retiro."}},{"@type":"Question","name":"¿Cómo funciona el tallaje?","acceptedAnswer":{"@type":"Answer","text":"Se presta un set para probar tallas. Ese set no corresponde al vestuario final del evento."}},{"@type":"Question","name":"¿Qué ocurre si se daña o falta una pieza?","acceptedAnswer":{"@type":"Answer","text":"Se aplica la valorización informada porque el daño puede afectar tanto la reposición como un arriendo posterior."}}]}</script>
 </head>
@@ -18,24 +18,45 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="SyT — Sol y Tierra, inicio"><img src="assets/images/brand/syt-mark.svg" width="156" height="64" alt="SyT — Sol y Tierra"><span>SyT</span></a>
+    <a class="brand" href="index.html">SYT</a>
     <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a class="active" href="condiciones.html">Condiciones</a>
-      <a href="catalogo.html">Trajes</a>
-      <a href="solicitud.html">Reservar</a>
+      <a  href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html">Catálogo de Trajes</a>
+          <a href="valorizacion.html">Valorización y Precios</a>
+          <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+          <a href="guia-tallaje.html">Guía de Tallas</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="condiciones.html">Reglamento de Arriendo</a>
+          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
+          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+        </div>
+      </div>
+      <a  href="solicitud.html">Reservar</a>
+      <a  href="contacto.html">Contacto</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary" href="solicitud.html">Reservar</a>
+      <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
       <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
   </div>
   <div class="wrap mobile-menu">
     <a href="index.html">Inicio</a>
-    <a href="condiciones.html">Condiciones</a>
-    <a href="catalogo.html">Trajes</a>
+    <a href="catalogo.html">Catálogo de Trajes</a>
+    <a href="valorizacion.html">Valorización y Precios</a>
+    <a href="guia-visual-traje.html">Guía Visual de Piezas</a>
+    <a href="guia-tallaje.html">Guía de Tallas</a>
+    <a href="condiciones.html">Condiciones y Garantía</a>
+    <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
     <a href="solicitud.html">Reservar</a>
-    <a href="intranet.html">Portal cliente</a>
+    <a href="contacto.html">Contacto</a>
   </div>
 </header>
 
@@ -63,7 +84,7 @@
         <button class="condition-tab" type="button" role="tab" data-condition-index="1" aria-selected="false">Reserva</button>
         <button class="condition-tab" type="button" role="tab" data-condition-index="2" aria-selected="false">Tallaje</button>
         <button class="condition-tab" type="button" role="tab" data-condition-index="3" aria-selected="false">Transporte</button>
-        <button class="condition-tab" type="button" role="tab" data-condition-index="4" aria-selected="false">6 horas</button>
+        <button class="condition-tab" type="button" role="tab" data-condition-index="4" aria-selected="false">Horarios</button>
         <button class="condition-tab" type="button" role="tab" data-condition-index="5" aria-selected="false">Atrasos</button>
         <button class="condition-tab" type="button" role="tab" data-condition-index="6" aria-selected="false">Uso</button>
         <button class="condition-tab" type="button" role="tab" data-condition-index="7" aria-selected="false">Lluvia</button>
@@ -75,7 +96,7 @@
         <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>02</span><small>Fecha</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Cómo asegurar disponibilidad</span><h2>Reserva</h2><p>Para agendar la fecha se paga el <strong>50% del arriendo + la garantía completa</strong>. El saldo se paga hasta <strong>24 horas antes</strong> del retiro. Sin reserva no hay trajes asegurados.</p><div class="condition-key">La solicitud por sí sola no bloquea la fecha.</div></div></article>
         <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>03</span><small>Tallas</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Prueba antes del evento</span><h2>Tallaje</h2><p>Entregamos un <strong>set de muestras</strong> para que los alumnos prueben tallas antes de la entrega final. El set se devuelve en <strong>3 días</strong>. El traje limpio se entrega cerca de la presentación.</p><div class="condition-key">Las muestras no son los trajes del evento.</div></div></article>
         <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>04</span><small>Cuidado</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Desde el primer minuto</span><h2>Transporte</h2><p>El retiro y devolución son responsabilidad del colegio. Se requiere <strong>vehículo cerrado con espacio amplio</strong> (auto, SUV o familiar). Penachos y accesorios no deben ir apretados. No se permite camioneta descubierta.</p><div class="condition-key">Una sola fila de penachos, sin apilar ni comprimir.</div></div></article>
-        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>05</span><small>Tiempo</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">El mismo traje puede continuar su ruta</span><h2>Ventana de 6 horas</h2><p>El traje se usa por <strong>6 horas máximo</strong> desde el retiro. La puntualidad protege a los otros cursos que ocupan el mismo vestuario el mismo día. Se cuentan al retirar y al devolver.</p><div class="condition-key">La ventana comienza en el momento del retiro.</div></div></article>
+        <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>05</span><small>Horarios</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Entrega noche previa y devolución post-baile</span><h2>Horarios Reales de Retiro y Devolución</h2><p>Para evitar carreras en la mañana del evento, el vestuario se retira la <strong>noche anterior entre 18:00 y 22:30</strong>. La devolución se realiza estrictamente <strong>dentro de las 3 horas posteriores al término de la presentación</strong> de tu curso.</p><div class="condition-key">Retiro la noche previa · Devolución 3h post-baile.</div></div></article>
         <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>06</span><small>Horario</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Tolerancia y descuentos</span><h2>Atrasos y multas</h2><p>Hay <strong>10 minutos de tolerancia</strong>. Entre 11 y 25 min se descuenta el <strong>30%</strong> de la garantía. Entre 26 y 45 min, el <strong>80%</strong>. Más de 45 min, el <strong>100%</strong> de la garantía.</p><div class="condition-key">Planifica carga y traslado antes de la hora acordada.</div></div></article>
         <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>07</span><small>Vestuario</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Qué nunca debes hacer</span><h2>Uso del vestuario</h2><p>No se puede <strong>coser, cortar, pegar ni ajustar</strong> ninguna pieza. El lavado, limpieza y mantención los realiza <strong>Sol y Tierra</strong> después de cada uso.</p><div class="condition-key">Usa solo el sistema de ajuste personal indicado.</div></div></article>
         <article class="condition-slide" data-condition-slide role="tabpanel"><div class="condition-slide-index"><span>08</span><small>Evento</small></div><div class="condition-slide-copy"><span class="condition-eyebrow">Cuando el clima cambia el plan</span><h2>Lluvia y fuerza mayor</h2><p>Si el evento se suspende por <strong>lluvia o fuerza mayor</strong> y no se puede reprogramar, se devuelve el <strong>70% del arriendo</strong> y la garantía completa. Evaluamos caso a caso.</p><div class="condition-key">Primero revisamos si existe una fecha de reemplazo.</div></div></article>
@@ -134,7 +155,7 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-brand"><img src="assets/images/brand/syt-mark.svg" alt="SyT — Sol y Tierra" width="156" height="64"><span>SyT</span></div>
+      <div class="footer-brand">SYT<span></span></div>
       <p>Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p>
     </div>
     <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="condiciones.html">Condiciones</a><a href="catalogo.html">Trajes</a><a href="condiciones.html#faq">Preguntas frecuentes</a></div>
@@ -152,6 +173,8 @@ document.querySelectorAll('[data-fade]').forEach(el=>io.observe(el));
 </script>
 <script src="assets/js/conditions-v2.js?v=20260805-1" defer></script>
 <script src="assets/js/premium.js?v=20260805-3" defer></script>
+<script src="assets/js/motion.js?v=20260828-1" defer></script>
 <script src="assets/js/sol.js?v=20260805-5" defer></script>
+<script>document.querySelectorAll('[data-menu-toggle]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('.mobile-menu').classList.toggle('open')}));</script>
 </body>
 </html>

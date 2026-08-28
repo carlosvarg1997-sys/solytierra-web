@@ -2,71 +2,121 @@
   {
     "comuna": "Puente Alto",
     "slug": "puente-alto",
-    "title": "Arriendo de trajes de Tobas en Puente Alto | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Puente Alto. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Puente Alto y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Puente Alto | Fiestas Patrias",
+    "description": "Arriendo de trajes de Tobas por curso en Puente Alto. Vestuario folclórico completo con penacho y accesorios para presentaciones de colegios este 18 de septiembre.",
+    "schools": [
+      "Colegio Alicante de Puente Alto",
+      "Colegio Mayor Tobalaba",
+      "Colegio Domingo Matte Mesías"
+    ],
+    "customText": "Puente Alto es una de las comunas con mayor participación en las Fiestas Patrias. En establecimientos como el Colegio Alicante o el Domingo Matte Mesías, la presentación folclórica es un hito anual muy esperado. Nuestro servicio por curso completo asegura que todos los alumnos luzcan trajes idénticos y coloridos, facilitando la logística a los apoderados."
   },
   {
     "comuna": "Maipú",
     "slug": "maipu",
-    "title": "Arriendo de trajes de Tobas en Maipú | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Maipú. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Maipú y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Maipú | Fiestas Patrias",
+    "description": "Arriendo de trajes de Tobas por curso completo en Maipú. Ropa folclórica de alta calidad para actos de colegios este 18 de septiembre. ¡Reserva con tiempo!",
+    "schools": [
+      "Colegio El Único Maipú",
+      "Liceo Bicentenario de Maipú",
+      "Colegio Santa María de Maipú"
+    ],
+    "customText": "En Maipú, el fervor del 18 de septiembre se vive en grande en cada colegio. Desde actos masivos hasta pequeñas presentaciones de curso, los trajes de Tobas destacan por su dinamismo y color. Con entregas coordinadas y trajes listos para vestir, los apoderados del Colegio Santa María y otros establecimientos locales confían en nosotros para sus presentaciones folclóricas."
   },
   {
     "comuna": "La Florida",
     "slug": "la-florida",
-    "title": "Arriendo de trajes de Tobas en La Florida | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en La Florida. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de La Florida y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en La Florida | Fiestas Patrias",
+    "description": "Vestuario de Tobas para actos de colegios en La Florida. Arriendo por curso de trajes completos con penacho y accesorios. Garantía 100% reembolsable.",
+    "schools": [
+      "Colegio Bellavista",
+      "Colegio Antilhue de La Florida",
+      "Colegio Las Lilas"
+    ],
+    "customText": "La Florida destaca por su activa participación en celebraciones escolares folclóricas. Ofrecemos a los cursos de colegios como el Bellavista o Antilhue una solución integral: vestuarios completos sanitizados, con penachos de plumas reales y todos los accesorios incluidos, coordinando un retiro simple en Recoleta."
   },
   {
     "comuna": "Peñalolén",
     "slug": "penalolen",
-    "title": "Arriendo de trajes de Tobas en Peñalolén | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Peñalolén. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Peñalolén y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Peñalolén | Fiestas Patrias",
+    "description": "Encuentra trajes de Tobas por curso en Peñalolén. Arriendo completo con plumas y accesorios para colegios. Descuentos grupales y reserva fácil.",
+    "schools": [
+      "Colegio Altamira",
+      "Colegio Mayor Peñalolén",
+      "Colegio Epullay"
+    ],
+    "customText": "En Peñalolén, las tradiciones folclóricas se viven intensamente cada septiembre. Los coloridos trajes de Tobas son ideales para destacar el ritmo y la alegría de la danza andina. Apoyamos a las directivas de curso del Colegio Mayor o el Altamira para que la presentación folclórica sea un éxito sin complicaciones de última hora."
   },
   {
     "comuna": "Recoleta",
     "slug": "recoleta",
-    "title": "Arriendo de trajes de Tobas en Recoleta | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Recoleta. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Recoleta y coordinamos la ubicación y las ventanas de retiro después de confirmar la reserva."
+    "title": "Arriendo de Trajes de Tobas en Recoleta | Retiro Directo",
+    "description": "Arriendo de trajes de Tobas en Recoleta. Retiro directo en nuestro taller de Santa Bárbara 4049. Trajes completos con accesorios para actos escolares.",
+    "schools": [
+      "Colegio Saint George School",
+      "Liceo Valentín Letelier",
+      "Colegio Rafael Sanhueza Lizardi"
+    ],
+    "customText": "Al ser Recoleta la comuna sede de nuestro taller en Santa Bárbara 4049, los colegios y apoderados locales cuentan con la comodidad absoluta de retirar y devolver los trajes a solo minutos de distancia. Una gran ventaja para asegurar la puntualidad y evitar multas por atraso."
   },
   {
     "comuna": "Renca",
     "slug": "renca",
-    "title": "Arriendo de trajes de Tobas en Renca | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Renca. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Renca y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Renca | Fiestas Patrias",
+    "description": "Arriendo de trajes de Tobas por curso en Renca. Vestuario folclórico andino con penacho, peto, falda y accesorios para actos escolares del 18.",
+    "schools": [
+      "Colegio Bicentenario Cumbres de Renca",
+      "Colegio Santo Tomás Renca",
+      "Escuela Lo Velásquez"
+    ],
+    "customText": "Las comunidades escolares de Renca organizan hermosos eventos de Fiestas Patrias donde la danza de los Tobas se ha vuelto muy popular. Con nuestro sistema de arriendo por curso, aseguramos uniformidad de colores y tallas para todos los estudiantes, simplificando la tarea del profesor de folclor."
   },
   {
     "comuna": "Lampa",
     "slug": "lampa",
-    "title": "Arriendo de trajes de Tobas en Lampa | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Lampa. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Lampa y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Lampa | Actos Escolares",
+    "description": "Arriendo de trajes de Tobas por curso en Lampa y Valle Grande. Vestuario andino completo con plumas y accesorios para lucirse este 18 de septiembre.",
+    "schools": [
+      "Colegio Sol del Valle",
+      "Colegio San Felipe de Lampa",
+      "Colegio Bicentenario de Lampa"
+    ],
+    "customText": "Aunque Lampa se encuentra en las zonas periféricas del norte de Santiago, la conexión fluida hacia Recoleta permite a los apoderados del Colegio Sol del Valle y otras instituciones coordinar el retiro grupal de los trajes sin problemas. Garantizamos que el vestuario llegue en óptimas condiciones."
   },
   {
     "comuna": "Quilicura",
     "slug": "quilicura",
-    "title": "Arriendo de trajes de Tobas en Quilicura | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Quilicura. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Quilicura y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Quilicura | Colegios",
+    "description": "Arriendo de trajes de Tobas para cursos de colegios en Quilicura. Todo incluido: penacho de plumas, accesorios y trajes a medida. Retiro en Recoleta.",
+    "schools": [
+      "Colegio San Sebastián de Quilicura",
+      "Colegio Palmarés",
+      "Colegio Bicentenario Santa Teresa"
+    ],
+    "customText": "Quilicura cuenta con una gran cantidad de colegios que celebran con orgullo las fiestas folclóricas. Ofrecemos a los apoderados de la comuna un proceso transparente de arriendo, con contratos claros y garantías que se devuelven oportunamente al entregar los trajes sanitizados."
   },
   {
     "comuna": "Huechuraba",
     "slug": "huechuraba",
-    "title": "Arriendo de trajes de Tobas en Huechuraba | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Huechuraba. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Huechuraba y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Huechuraba | Fiestas Patrias",
+    "description": "Arriendo de trajes de Tobas por curso en Huechuraba. Vestuario completo con accesorios para Fiestas Patrias. Taller a minutos en Recoleta.",
+    "schools": [
+      "Colegio Boston College Huechuraba",
+      "Colegio Grace College",
+      "Colegio Saint Rose School"
+    ],
+    "customText": "Huechuraba limita directamente con Recoleta, lo que hace que la logística sea sumamente rápida para colegios como el Boston College o Grace College. Los apoderados valoran poder visitar nuestro taller para verificar las tallas de las muestras y coordinar un retiro eficiente de los trajes del curso."
   },
   {
     "comuna": "Santiago",
     "slug": "santiago",
-    "title": "Arriendo de trajes de Tobas en Santiago | Sol y Tierra",
-    "description": "Consulta disponibilidad de trajes de Tobas por curso en Santiago. Precio, garantía, tallaje de prueba y condiciones claras.",
-    "customText": "Atendemos solicitudes de cursos de Santiago y coordinamos cada reserva según la fecha y el inventario disponible."
+    "title": "Arriendo de Trajes de Tobas en Santiago Centro | Fiestas Patrias",
+    "description": "Trajes de Tobas para colegios en Santiago Centro. Arriendo por curso completo de vestuario folclórico andino. Retiro en Recoleta, Santiago.",
+    "schools": [
+      "Instituto Nacional",
+      "Liceo 1 Javiera Carrera",
+      "Colegio Sagrados Corazones de Alameda"
+    ],
+    "customText": "El centro de Santiago reúne a establecimientos históricos con multitudinarias galas folclóricas. La danza de los Tobas, por su vigor y saltos característicos, es siempre una de las preferidas de los estudiantes. Facilitamos el arriendo grupal con contratos detallados y una asesoría directa por WhatsApp."
   }
 ]

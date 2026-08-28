@@ -1,25 +1,30 @@
-# Sol y Tierra
+# Arriendos Sol y Tierra - base de conocimiento web
 
-> Sol y Tierra arrienda trajes de Tobas para cursos y colegios de la Región Metropolitana, Chile.
+Sitio oficial de SyT SpA para arriendo de vestuario folclorico de Tobas a colegios en Santiago de Chile, especialmente para presentaciones de Fiestas Patrias.
 
-## Información principal
+## Paginas principales
 
-- [Inicio](https://arriendostrajestobas.cl/): propuesta de servicio y flujo general.
-- [Trajes](https://arriendostrajestobas.cl/catalogo.html): colores, piezas y consulta de disponibilidad.
-- [Condiciones y preguntas frecuentes](https://arriendostrajestobas.cl/condiciones.html): precio, reserva, garantía, tallaje, transporte, ventanas horarias, atrasos, daños y devolución.
-- [Solicitud](https://arriendostrajestobas.cl/solicitud.html): formulario para consultar disponibilidad con consentimiento explícito.
-- [Valorización](https://arriendostrajestobas.cl/valorizacion.html): valores de referencia ante pérdida o daño y su impacto logístico.
-- [Guía de tallaje](https://arriendostrajestobas.cl/guia-tallaje.html): orientación de tallas y uso del set prestado para prueba.
-- [Privacidad](https://arriendostrajestobas.cl/privacidad.html): finalidades, conservación y derechos sobre datos personales.
+- [Inicio](https://solytierra.cl/index.html): propuesta de valor, arquitectura del servicio, flujo de arriendo y calculadora rapida.
+- [Condiciones de Arriendo](https://solytierra.cl/condiciones.html): garantia, reserva, transporte, tallaje, horario, atrasos, fuerza mayor y devolucion.
+- [Catalogo de Trajes](https://solytierra.cl/catalogo.html): colores, piezas incluidas, tallas, reglas de uso y cotizador por cantidad.
+- [Solicitud](https://solytierra.cl/solicitud.html): formulario para colegio, curso, comuna, cantidad, fecha, horario del baile y color preferido.
+- [Preguntas Frecuentes](https://solytierra.cl/preguntas-frecuentes.html): precio, reserva, garantia, retiro en Recoleta, atrasos y lluvia.
+- [Contacto](https://solytierra.cl/contacto.html): direccion de retiro y devolucion en Santa Barbara 4049, Recoleta.
+- [Anatomia del Traje de Tobas](https://solytierra.cl/anatomia-traje-tobas.html): guia tecnica sobre piezas del vestuario.
 
-## Reglas resumidas
+## Cobertura local
+
+Paginas locales para arriendo de trajes de Tobas en Puente Alto, Maipu, La Florida, Penalolen, Recoleta, Renca, Lampa, Quilicura, Huechuraba y Santiago.
+
+## Reglas de negocio
 
 - Arriendo: $35.000 CLP por traje.
-- Garantía reembolsable: $10.000 CLP por traje.
-- Reserva: 50% del arriendo más la garantía completa.
-- Saldo: hasta 24 horas antes del retiro.
-- Tallaje: se presta un set para prueba; no es el vestuario final del evento.
-- Logística: la ubicación y la ventana de retiro se informan después de confirmar la reserva.
-- Compromiso: el documento oficial se descarga desde el portal cuando está habilitado y debe llevarse impreso para su firma.
-
-No se publica un teléfono, una dirección exacta ni disponibilidad de inventario no confirmada. Ante contradicción, prevalecen las condiciones vigentes y el compromiso de arriendo aplicable.
+- Garantia: $10.000 CLP por traje, reembolsable si el vestuario vuelve completo y sin danos.
+- Reserva: 50% del arriendo + 100% de la garantia.
+- Saldo: 50% restante hasta 24 horas antes del retiro.
+- Retiro y devolucion: Santa Barbara 4049, Recoleta.
+- Ventana operativa: retiro 3 horas antes del baile y devolucion 3 horas despues.
+- Tallaje: se entrega un set de prueba; no corresponde al traje definitivo.
+- Transporte: se recomienda auto con maletero grande para no danar trajes, penachos ni accesorios.
+- Atrasos: 10 minutos de tolerancia; luego multas progresivas de 30%, 80% o 100% segun retraso.
+- Uso: prohibido coser, cortar, pegar, ajustar, lavar o modificar el vestuario.

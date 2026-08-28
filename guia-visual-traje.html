@@ -25,48 +25,50 @@
 </head>
 <body class="jack">
   <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html">SYT</a>
-      <nav class="nav-links">
-        <a href="index.html">Inicio</a>
-        <div class="nav-dropdown">
-          <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
-          <div class="nav-dropdown-menu">
-            <a href="catalogo.html">Catálogo de Trajes</a>
-            <a href="valorizacion.html">Valorización y Precios</a>
-            <a href="guia-visual-traje.html" class="active">Guía Visual de Piezas</a>
-            <a href="guia-tallaje.html">Guía de Tallas</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
-          <div class="nav-dropdown-menu">
-            <a href="condiciones.html">Reglamento de Arriendo</a>
-            <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
-            <a href="condiciones.html#transporte">Transporte en Auto</a>
-            <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
-          </div>
-        </div>
-        <a href="solicitud.html">Reservar</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-      <div class="nav-actions">
-        <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
-        <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-      </div>
-    </div>
-    <div class="wrap mobile-menu">
+  <div class="wrap">
+    <a class="brand" href="index.html">SYT <span class="brand-sub">Sol y Tierra</span></a>
+    <nav class="nav-links">
       <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo de Trajes</a>
-      <a href="valorizacion.html">Valorización y Precios</a>
-      <a href="guia-visual-traje.html" class="active">Guía Visual de Piezas</a>
-      <a href="guia-tallaje.html">Guía de Tallas</a>
-      <a href="condiciones.html">Condiciones y Garantía</a>
-      <a href="preguntas-frecuentes.html">Preguntas Frecuentes</a>
+      <div class="nav-dropdown active">
+        <span class="nav-dropdown-trigger">Trajes & Servicios ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html">Catálogo de Trajes</a>
+          <a href="valorizacion.html">Valorización y Precios</a>
+          <a href="guia-visual-traje.html" class="active">Guía Visual de Piezas</a>
+          <a href="guia-tallaje.html">Guía de Tallas</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-trigger">Condiciones & Garantía ▾</span>
+        <div class="nav-dropdown-menu">
+          <a href="condiciones.html">Reglamento de Arriendo</a>
+          <a href="condiciones.html#garantia">Política de Garantía y Daños</a>
+          <a href="condiciones.html#transporte">Transporte en Auto</a>
+          <a href="condiciones.html#faq">Preguntas Frecuentes</a>
+        </div>
+      </div>
       <a href="solicitud.html">Reservar</a>
       <a href="contacto.html">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost nav-portal-btn" href="intranet.html">Mi Arriendo</a>
+      <a class="btn btn-primary" href="solicitud.html">Reservar trajes</a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-label="Abrir menú"><svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     </div>
-  </header>
+  </div>
+  <div class="wrap mobile-menu">
+    <a href="index.html">Inicio</a>
+    <a href="catalogo.html">Catálogo de Trajes</a>
+    <a href="valorizacion.html">Valorización y Precios</a>
+    <a href="guia-visual-traje.html" class="active">Guía Visual de Piezas</a>
+    <a href="guia-tallaje.html">Guía de Tallas</a>
+    <a href="condiciones.html">Condiciones y Garantía</a>
+    <a href="condiciones.html#faq">Preguntas Frecuentes</a>
+    <a href="intranet.html">Portal Clientes / Mi Arriendo</a>
+    <a href="solicitud.html">Reservar</a>
+    <a href="contacto.html">Contacto</a>
+  </div>
+</header>
 
   <main>
     <!-- HERO SECTION -->
@@ -246,37 +248,54 @@
           <p style="font-size:1.1rem;color:var(--text-muted);margin-top:8px">Para utilizar el traje, deberás contar con los siguientes elementos de <strong>uso personal</strong>.</p>
         </header>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px">
-          <!-- 1. ALFILER DE GANCHO -->
-          <article style="background:#ffffff;border:1px solid var(--border-light);border-radius:24px;padding:32px;box-shadow:0 4px 18px rgba(0,0,0,.03);display:flex;flex-direction:column">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-              <span style="width:36px;height:36px;background:#4b5320;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem">1</span>
-              <h3 style="font-family:var(--font-display);font-size:1.35rem;color:#4b5320;margin:0">ALFILER DE GANCHO</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px">
+          <!-- 1. ALFILER DE GANCHO OFICIAL 5 CM -->
+          <article class="personal-card-pro" style="background:#ffffff;border:1.5px solid var(--border-light);border-radius:24px;padding:32px;box-shadow:0 8px 30px rgba(0,0,0,.04);display:flex;flex-direction:column;position:relative;overflow:hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span style="width:36px;height:36px;background:#181411;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;font-family:var(--font-mono)">1</span>
+                <h3 style="font-family:var(--font-display);font-size:1.4rem;color:var(--black);margin:0">ALFILER DE GANCHO</h3>
+              </div>
+              <span class="tag" style="background:rgba(34,197,94,.12);color:#16a34a;font-weight:800;font-size:.72rem">MEDIDA OFICIAL</span>
             </div>
-            <ul style="color:var(--text-dark);font-size:1rem;margin:0 0 20px 20px;line-height:1.8">
-              <li><strong>Metálico.</strong></li>
-              <li><strong>5 cm de largo.</strong></li>
-            </ul>
-            <figure style="margin:auto 0 0;text-align:center;background:#fff;border:1px solid var(--border-light);border-radius:18px;padding:16px;overflow:hidden">
-              <img src="assets/images/guides/alfiler_gancho_oficial_5cm.webp" width="600" height="450" loading="lazy" alt="Alfiler de gancho metálico de 5 cm oficial" style="max-height:260px;width:auto;margin:0 auto;object-fit:contain">
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+              <span style="padding:4px 10px;background:#f3f4f6;border-radius:6px;font-size:.82rem;font-weight:700;color:var(--text-dark)">✓ Metálico de acero</span>
+              <span style="padding:4px 10px;background:rgba(240,69,46,.08);border-radius:6px;font-size:.82rem;font-weight:800;color:var(--coral)">✓ 5 cm de largo exacto</span>
+              <span style="padding:4px 10px;background:#f3f4f6;border-radius:6px;font-size:.82rem;font-weight:700;color:var(--text-dark)">✓ 1 por alumno</span>
+            </div>
+
+            <figure style="margin:auto 0 0;text-align:center;background:#ffffff;border:1px solid var(--border-light);border-radius:18px;padding:18px;overflow:hidden;box-shadow:inset 0 2px 6px rgba(0,0,0,.02)">
+              <img src="assets/images/guides/alfiler_gancho_oficial_5cm.webp" width="1200" height="900" loading="lazy" alt="Alfiler de gancho metálico de 5 cm oficial con regla de medida" style="max-height:260px;width:auto;margin:0 auto;object-fit:contain;transition:transform .3s var(--anim-spring)" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </figure>
+            <div style="margin-top:14px;font-size:.84rem;color:var(--text-muted);display:flex;align-items:center;justify-content:space-between">
+              <span>📏 Referencia técnica con regla</span>
+              <span style="font-weight:700;color:var(--black)">No usar alfileres chicos</span>
+            </div>
           </article>
 
-          <!-- 2. TRIPOLINO MACRAME -->
-          <article style="background:#ffffff;border:1px solid var(--border-light);border-radius:24px;padding:32px;box-shadow:0 4px 18px rgba(0,0,0,.03);display:flex;flex-direction:column">
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
-              <span style="width:36px;height:36px;background:#4b5320;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem">2</span>
-              <h3 style="font-family:var(--font-display);font-size:1.35rem;color:#4b5320;margin:0">TRIPOLINO MACRAMÉ</h3>
+          <!-- 2. TRIPOLINO MACRAME OFICIAL 2 MM -->
+          <article class="personal-card-pro" style="background:#ffffff;border:1.5px solid var(--border-light);border-radius:24px;padding:32px;box-shadow:0 8px 30px rgba(0,0,0,.04);display:flex;flex-direction:column;position:relative;overflow:hidden">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+              <div style="display:flex;align-items:center;gap:12px">
+                <span style="width:36px;height:36px;background:#181411;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.1rem;font-family:var(--font-mono)">2</span>
+                <h3 style="font-family:var(--font-display);font-size:1.4rem;color:var(--black);margin:0">TRIPOLINO MACRAMÉ</h3>
+              </div>
+              <span class="tag" style="background:rgba(240,69,46,.12);color:var(--coral);font-weight:800;font-size:.72rem">USO PERSONAL</span>
             </div>
-            <ul style="color:var(--text-dark);font-size:1rem;margin:0 0 20px 20px;line-height:1.8">
-              <li><strong>2 mm de grosor.</strong></li>
-              <li><strong>Del color que estimen conveniente.</strong></li>
-            </ul>
-            <figure style="margin:auto 0 0;text-align:center;background:#fff;border:1px solid var(--border-light);border-radius:18px;padding:16px;overflow:hidden">
-              <img src="assets/images/guides/tripolino_macrame_oficial_2mm.webp" width="600" height="450" loading="lazy" alt="Bobina de cordón tripolino macramé de 2 mm oficial" style="max-height:260px;width:auto;margin:0 auto;object-fit:contain">
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+              <span style="padding:4px 10px;background:rgba(240,69,46,.08);border-radius:6px;font-size:.82rem;font-weight:800;color:var(--coral)">✓ 2 mm de grosor</span>
+              <span style="padding:4px 10px;background:#f3f4f6;border-radius:6px;font-size:.82rem;font-weight:700;color:var(--text-dark)">✓ Color a elección</span>
+              <span style="padding:4px 10px;background:#f3f4f6;border-radius:6px;font-size:.82rem;font-weight:700;color:var(--text-dark)">✓ 8 a 10 metros</span>
+            </div>
+
+            <figure style="margin:auto 0 0;text-align:center;background:#ffffff;border:1px solid var(--border-light);border-radius:18px;padding:18px;overflow:hidden;box-shadow:inset 0 2px 6px rgba(0,0,0,.02)">
+              <img src="assets/images/guides/tripolino_macrame_oficial_2mm.webp" width="600" height="450" loading="lazy" alt="Bobina de cordón tripolino macramé de 2 mm oficial" style="max-height:260px;width:auto;margin:0 auto;object-fit:contain;transition:transform .3s var(--anim-spring)" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
             </figure>
-            <div style="margin-top:14px;font-size:.85rem;color:var(--text-muted);display:flex;align-items:center;gap:6px">
-              <span>👤</span> <span>Uso personal. Debe retirarse antes de devolver el traje.</span>
+            <div style="margin-top:14px;font-size:.84rem;color:var(--text-muted);display:flex;align-items:center;justify-content:space-between">
+              <span>👤 Elemento de uso e higiene personal</span>
+              <span style="font-weight:700;color:#c0392b">Retirar antes de devolver</span>
             </div>
           </article>
         </div>
@@ -322,7 +341,7 @@
         <div class="footer-brand">SYT<span></span></div>
         <p>Arriendo de vestuario folclórico para colegios. Trajes de Tobas completos para Fiestas Patrias.</p>
       </div>
-      <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="condiciones.html">Condiciones</a><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></div>
+      <div class="footer-col"><h4>Sitio</h4><a href="index.html">Inicio</a><a href="catalogo.html">Catálogo</a><a href="condiciones.html">Condiciones</a><a href="condiciones.html#faq">Preguntas frecuentes</a></div>
       <div class="footer-col"><h4>Reservar</h4><a href="solicitud.html">Solicitud</a><a href="valorizacion.html">Valorización</a><a href="intranet.html">Portal cliente</a></div>
       <div class="footer-col"><h4>Contacto</h4><a href="contacto.html">Contacto</a><a href="https://wa.me/56963348237" target="_blank" rel="noopener">WhatsApp Directo</a></div>
     </div>
